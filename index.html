@@ -15,10 +15,10 @@
         <div class="nav-container">
             <div class="logo">Webit<strong>AI</strong></div>
             <ul class="nav-links" id="navLinks">
-                <li><a href="#accueil">Accueil</a></li>
-                <li><a href="#services">Nos services</a></li>
-                <li><a href="#expertise">Expertise</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="index.html" class="active">Accueil</a></li>
+                <li><a href="services.html">Nos services</a></li>
+                <li><a href="infogerance.html">Infogérance</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
             <div class="hamburger" id="hamburger">
                 <span></span>
@@ -29,7 +29,7 @@
     </nav>
 
     <!-- Hero Section avec image de fond -->
-    <section id="accueil" class="hero-fullscreen">
+    <section class="hero-fullscreen">
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1 class="hero-title">VOTRE PARTENAIRE INFRASTRUCTURE IT</h1>
@@ -39,8 +39,8 @@
                 tout en leur apportant valeur et excellence.
             </p>
             <div class="hero-buttons">
-                <a href="#services" class="btn btn-primary">Découvrir nos services</a>
-                <a href="#contact" class="btn btn-outline">Nous contacter</a>
+                <a href="services.html" class="btn btn-primary">Découvrir nos services</a>
+                <a href="contact.html" class="btn btn-outline">Nous contacter</a>
             </div>
         </div>
         <div class="scroll-indicator">
@@ -72,8 +72,16 @@
         </div>
     </section>
 
+    <!-- Bande colorée -->
+    <section class="banner-section">
+        <div class="banner-content">
+            <h2>Une offre de services développée autour de 6 métiers complémentaires</h2>
+        </div>
+        <div class="banner-arrow"></div>
+    </section>
+
     <!-- Section Services -->
-    <section id="services" class="services-minimal">
+    <section class="services-minimal">
         <div class="container">
             <div class="section-header-center">
                 <h2>Nos Services</h2>
@@ -85,106 +93,113 @@
                 <div class="service-card-minimal">
                     <div class="service-icon-minimal">💻</div>
                     <h3>Administration Système</h3>
-                    <p>Gestion complète de vos serveurs Windows et Linux. Virtualisation, monitoring et maintenance.</p>
+                    <p>Gestion complète de vos serveurs Windows et Linux. Virtualisation, monitoring et maintenance proactive.</p>
                     <ul>
                         <li>Windows Server & Active Directory</li>
                         <li>Linux (RedHat, Ubuntu, CentOS)</li>
                         <li>VMware, Hyper-V, Proxmox</li>
+                        <li>Monitoring & Maintenance</li>
                     </ul>
+                    <a href="services.html#systeme" class="service-link">En savoir plus →</a>
                 </div>
 
                 <div class="service-card-minimal">
                     <div class="service-icon-minimal">🌐</div>
                     <h3>Infrastructure Réseau</h3>
-                    <p>Conception et déploiement d'architectures réseau performantes et sécurisées.</p>
+                    <p>Conception et déploiement d'architectures réseau performantes, sécurisées et évolutives.</p>
                     <ul>
+                        <li>Architecture LAN/WAN & VLAN</li>
                         <li>Cisco, Aruba, HP</li>
                         <li>VPN & Interconnexion sites</li>
                         <li>F5 Load Balancing</li>
                     </ul>
+                    <a href="services.html#reseau" class="service-link">En savoir plus →</a>
                 </div>
 
                 <div class="service-card-minimal featured-card">
                     <div class="service-icon-minimal">🛡️</div>
                     <h3>Sécurité Informatique</h3>
-                    <p>Protection complète : firewall, EDR, audits de sécurité et conformité.</p>
+                    <p>Protection complète : firewall nouvelle génération, EDR, audits de sécurité et mise en conformité.</p>
                     <ul>
-                        <li>Fortinet, Palo Alto</li>
-                        <li>SentinelOne, Wazuh</li>
+                        <li>Fortinet FortiGate, Palo Alto</li>
+                        <li>EDR : SentinelOne, Wazuh</li>
+                        <li>Audits & Conformité</li>
                         <li>RGPD & ISO27001</li>
                     </ul>
                     <span class="featured-badge">Expertise certifiée</span>
+                    <a href="services.html#securite" class="service-link">En savoir plus →</a>
                 </div>
 
                 <div class="service-card-minimal">
                     <div class="service-icon-minimal">📡</div>
                     <h3>WiFi Professionnel</h3>
-                    <p>Déploiement de réseaux WiFi haute performance avec site survey Ekahau.</p>
+                    <p>Déploiement de réseaux WiFi haute performance avec site survey Ekahau et gestion centralisée.</p>
                     <ul>
                         <li>Site Survey & Design RF</li>
-                        <li>Aruba, Cisco Meraki</li>
+                        <li>Aruba, Cisco Meraki, Ruckus</li>
                         <li>802.1X & Portail captif</li>
+                        <li>Gestion cloud Aruba Central</li>
                     </ul>
+                    <a href="services.html#wifi" class="service-link">En savoir plus →</a>
                 </div>
 
                 <div class="service-card-minimal">
                     <div class="service-icon-minimal">📹</div>
                     <h3>Vidéosurveillance IP</h3>
-                    <p>Systèmes de vidéosurveillance professionnels avec analyse vidéo intelligente.</p>
+                    <p>Systèmes de vidéosurveillance professionnels avec caméras 4K/8MP et analyse vidéo intelligente.</p>
                     <ul>
-                        <li>Caméras 4K/8MP</li>
-                        <li>NVR & Stockage</li>
+                        <li>Caméras IP 4K/8MP</li>
+                        <li>NVR & Stockage haute capacité</li>
+                        <li>Analyse vidéo IA</li>
                         <li>Accès distant sécurisé</li>
                     </ul>
+                    <a href="services.html#video" class="service-link">En savoir plus →</a>
                 </div>
 
                 <div class="service-card-minimal">
                     <div class="service-icon-minimal">☁️</div>
                     <h3>Cloud & Automatisation</h3>
-                    <p>Migration cloud et automatisation avec Ansible/Terraform pour optimiser vos coûts.</p>
+                    <p>Migration cloud et automatisation avec Ansible/Terraform pour optimiser vos infrastructures et réduire les coûts.</p>
                     <ul>
-                        <li>Azure, AWS, GCP</li>
+                        <li>Microsoft Azure, AWS, GCP</li>
                         <li>Ansible/AWX, Terraform</li>
+                        <li>Infrastructure as Code</li>
                         <li>DevOps & CI/CD</li>
                     </ul>
+                    <a href="services.html#cloud" class="service-link">En savoir plus →</a>
                 </div>
 
             </div>
         </div>
     </section>
 
-    <!-- Section Expertise -->
-    <section id="expertise" class="expertise-minimal">
+    <!-- Section Clients -->
+    <section class="clients-section">
         <div class="container">
-            <div class="section-header-center">
-                <h2>Notre Expertise</h2>
+            <h2 class="clients-title">Ils nous font confiance</h2>
+            <div class="clients-grid">
+                <div class="client-logo">
+                    <div class="client-placeholder">Client 1</div>
+                </div>
+                <div class="client-logo">
+                    <div class="client-placeholder">Client 2</div>
+                </div>
+                <div class="client-logo">
+                    <div class="client-placeholder">Client 3</div>
+                </div>
+                <div class="client-logo">
+                    <div class="client-placeholder">Client 4</div>
+                </div>
+                <div class="client-logo">
+                    <div class="client-placeholder">Client 5</div>
+                </div>
+                <div class="client-logo">
+                    <div class="client-placeholder">Client 6</div>
+                </div>
             </div>
-
-            <div class="expertise-grid-minimal">
-                
-                <div class="expertise-box">
-                    <h3>🎓 Certifications</h3>
-                    <div class="cert-badges">
-                        <span>Fortinet NSE 1/3/4</span>
-                        <span>Palo Alto Networks</span>
-                        <span>Cisco SBTO</span>
-                        <span>Cisco Meraki</span>
-                        <span>Ekahau ECSE</span>
-                    </div>
-                </div>
-
-                <div class="expertise-box">
-                    <h3>💼 Secteurs d'activité</h3>
-                    <p>Secteur public • Finance • Industrie • Éducation • Retail • Santé</p>
-                </div>
-
-                <div class="expertise-box">
-                    <h3>⚡ Notre approche</h3>
-                    <p><strong>70% RUN</strong> : Exploitation quotidienne, support N2/N3<br>
-                    <strong>30% BUILD</strong> : Projets d'évolution et modernisation</p>
-                </div>
-
-            </div>
+            <p class="clients-note">
+                <em>💡 Remplacez "Client X" par vos vrais logos (format PNG, fond transparent)</em>
+            </p>
         </div>
     </section>
 
@@ -194,70 +209,7 @@
             <div class="cta-content-center">
                 <h2>Un projet IT ?</h2>
                 <p>Discutons de vos besoins en infrastructure</p>
-                <a href="#contact" class="btn btn-primary-large">Demander un devis gratuit</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section Contact -->
-    <section id="contact" class="contact-minimal">
-        <div class="container">
-            <div class="section-header-center">
-                <h2>Contactez-nous</h2>
-            </div>
-
-            <div class="contact-layout">
-                
-                <div class="contact-info-minimal">
-                    <div class="contact-item-minimal">
-                        <span class="contact-icon-minimal">📧</span>
-                        <div>
-                            <h4>Email</h4>
-                            <a href="mailto:contact@webit-ai.com">contact@webit-ai.com</a>
-                        </div>
-                    </div>
-
-                    <div class="contact-item-minimal">
-                        <span class="contact-icon-minimal">📱</span>
-                        <div>
-                            <h4>Téléphone</h4>
-                            <a href="tel:+33615197625">+33 6 15 19 76 25</a>
-                        </div>
-                    </div>
-
-                    <div class="contact-item-minimal">
-                        <span class="contact-icon-minimal">🌍</span>
-                        <div>
-                            <h4>Zones d'intervention</h4>
-                            <p>France • Gabon</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="contact-form-minimal">
-                    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-                        <div class="form-row">
-                            <input type="text" name="name" placeholder="Nom *" required>
-                            <input type="email" name="email" placeholder="Email *" required>
-                        </div>
-                        <div class="form-row">
-                            <input type="tel" name="phone" placeholder="Téléphone">
-                            <input type="text" name="company" placeholder="Entreprise">
-                        </div>
-                        <select name="service" required>
-                            <option value="">Service concerné *</option>
-                            <option value="systeme">Administration Système</option>
-                            <option value="reseau">Infrastructure Réseau</option>
-                            <option value="securite">Sécurité Informatique</option>
-                            <option value="wifi">WiFi Professionnel</option>
-                            <option value="video">Vidéosurveillance</option>
-                            <option value="cloud">Cloud & Automatisation</option>
-                        </select>
-                        <textarea name="message" rows="4" placeholder="Votre message *" required></textarea>
-                        <button type="submit" class="btn btn-primary">Envoyer</button>
-                    </form>
-                </div>
-
+                <a href="contact.html" class="btn btn-primary-large">Demander un devis gratuit</a>
             </div>
         </div>
     </section>
@@ -268,13 +220,14 @@
             <div class="footer-content-minimal">
                 <div class="footer-brand">
                     <h3>Webit<strong>AI</strong></h3>
-                    <p>Expert Infrastructure IT</p>
+                    <p>Expert Infrastructure IT<br>
+                    <small>France • Gabon</small></p>
                 </div>
                 <div class="footer-links">
-                    <a href="#services">Services</a>
-                    <a href="#expertise">Expertise</a>
-                    <a href="#contact">Contact</a>
-                    <a href="#">Mentions légales</a>
+                    <a href="index.html">Accueil</a>
+                    <a href="services.html">Services</a>
+                    <a href="infogerance.html">Infogérance</a>
+                    <a href="contact.html">Contact</a>
                 </div>
             </div>
             <div class="footer-bottom">
