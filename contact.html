@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contactez Webit AI pour vos projets IT">
+    <title>Contact - Webit AI</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Webit<strong>AI</strong></div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="services.html">Nos services</a></li>
+                <li><a href="infogerance.html">Infogérance</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Page Contact -->
+    <section class="page-hero contact-hero">
+        <div class="hero-overlay"></div>
+        <div class="page-hero-content">
+            <h1>CONTACTEZ-NOUS</h1>
+            <p>Un projet IT ? Besoin d'expertise ? Parlons-en !</p>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section class="contact-page">
+        <div class="container">
+            
+            <div class="contact-intro">
+                <h2>Discutons de votre projet</h2>
+                <p>
+                    Que vous ayez besoin d'un audit de votre infrastructure, d'un accompagnement sur un projet spécifique, 
+                    ou d'une infogérance complète, notre équipe d'experts est à votre écoute.
+                </p>
+            </div>
+
+            <div class="contact-layout-page">
+                
+                <!-- Informations de contact -->
+                <div class="contact-info-page">
+                    <h3>Nos coordonnées</h3>
+                    
+                    <div class="contact-item-page">
+                        <div class="contact-icon-page">📧</div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <a href="mailto:contact@webit-ai.com">contact@webit-ai.com</a>
+                            <p class="contact-note">Nous vous répondons sous 24h ouvrées</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item-page">
+                        <div class="contact-icon-page">📱</div>
+                        <div class="contact-details">
+                            <h4>Téléphone</h4>
+                            <a href="tel:+33615197625">+33 6 15 19 76 25</a>
+                            <p class="contact-note">Lundi - Vendredi : 9h - 18h</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item-page">
+                        <div class="contact-icon-page">🌍</div>
+                        <div class="contact-details">
+                            <h4>Zones d'intervention</h4>
+                            <p><strong>France</strong> : Île-de-France et national</p>
+                            <p><strong>Gabon</strong> : Libreville et régions</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item-page">
+                        <div class="contact-icon-page">⏰</div>
+                        <div class="contact-details">
+                            <h4>Disponibilité</h4>
+                            <p><strong>Support standard</strong> : 9h - 18h</p>
+                            <p><strong>Support 24/7</strong> : Disponible sur contrat d'infogérance</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-social">
+                        <h4>Suivez-nous</h4>
+                        <div class="social-links">
+                            <a href="#" class="social-link" title="LinkedIn">💼 LinkedIn</a>
+                            <a href="#" class="social-link" title="Twitter">🐦 Twitter</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulaire de contact -->
+                <div class="contact-form-page">
+                    <h3>Envoyez-nous un message</h3>
+                    
+                    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="form-contact">
+                        
+                        <div class="form-row-page">
+                            <div class="form-group-page">
+                                <label for="nom">Nom complet *</label>
+                                <input type="text" id="nom" name="nom" required placeholder="Jean Dupont">
+                            </div>
+                            <div class="form-group-page">
+                                <label for="entreprise">Entreprise</label>
+                                <input type="text" id="entreprise" name="entreprise" placeholder="Votre société">
+                            </div>
+                        </div>
+
+                        <div class="form-row-page">
+                            <div class="form-group-page">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required placeholder="jean.dupont@exemple.fr">
+                            </div>
+                            <div class="form-group-page">
+                                <label for="telephone">Téléphone</label>
+                                <input type="tel" id="telephone" name="telephone" placeholder="+33 6 12 34 56 78">
+                            </div>
+                        </div>
+
+                        <div class="form-group-page">
+                            <label for="service">Service concerné *</label>
+                            <select id="service" name="service" required>
+                                <option value="">-- Sélectionnez un service --</option>
+                                <option value="administration">Administration Système</option>
+                                <option value="reseau">Infrastructure Réseau</option>
+                                <option value="securite">Sécurité Informatique</option>
+                                <option value="wifi">WiFi Professionnel</option>
+                                <option value="video">Vidéosurveillance IP</option>
+                                <option value="cloud">Cloud & Automatisation</option>
+                                <option value="infogerance">Infogérance</option>
+                                <option value="audit">Audit & Conseil</option>
+                                <option value="autre">Autre besoin</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group-page">
+                            <label for="budget">Budget estimé (optionnel)</label>
+                            <select id="budget" name="budget">
+                                <option value="">-- Sélectionnez --</option>
+                                <option value="5k">Moins de 5 000€</option>
+                                <option value="5-10k">5 000€ - 10 000€</option>
+                                <option value="10-25k">10 000€ - 25 000€</option>
+                                <option value="25-50k">25 000€ - 50 000€</option>
+                                <option value="50k+">Plus de 50 000€</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group-page">
+                            <label for="echeance">Échéance souhaitée</label>
+                            <select id="echeance" name="echeance">
+                                <option value="">-- Sélectionnez --</option>
+                                <option value="urgent">Urgent (moins d'1 mois)</option>
+                                <option value="1-3mois">1 à 3 mois</option>
+                                <option value="3-6mois">3 à 6 mois</option>
+                                <option value="6mois+">Plus de 6 mois</option>
+                                <option value="reflexion">En phase de réflexion</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group-page">
+                            <label for="message">Décrivez votre projet *</label>
+                            <textarea id="message" name="message" rows="6" required placeholder="Décrivez-nous votre besoin, vos contraintes, vos objectifs..."></textarea>
+                        </div>
+
+                        <div class="form-group-page checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="newsletter" value="oui">
+                                <span>Je souhaite recevoir les actualités et offres de Webit AI</span>
+                            </label>
+                        </div>
+
+                        <div class="form-group-page">
+                            <button type="submit" class="btn btn-primary btn-large">
+                                Envoyer le message
+                            </button>
+                        </div>
+
+                        <p class="form-note-page">
+                            * Champs obligatoires<br>
+                            <small>Vos données sont traitées conformément au RGPD et ne seront jamais transmises à des tiers.</small>
+                        </p>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Section FAQ rapide -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title-center">Questions fréquentes</h2>
+            
+            <div class="faq-grid">
+                
+                <div class="faq-item">
+                    <h3>❓ Quels sont vos délais de réponse ?</h3>
+                    <p>Nous nous engageons à répondre à toute demande dans les 24h ouvrées. Pour les urgences, 
+                    contactez-nous directement par téléphone.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>💰 Proposez-vous des devis gratuits ?</h3>
+                    <p>Oui, tous nos devis sont gratuits et sans engagement. Nous étudions votre besoin et vous 
+                    proposons une solution adaptée à votre budget.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>🌍 Intervenez-vous partout en France ?</h3>
+                    <p>Oui, nous intervenons sur l'ensemble du territoire français. Notre siège est en Île-de-France, 
+                    mais nous avons des partenaires dans toutes les régions.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>🔧 Faites-vous de la maintenance ?</h3>
+                    <p>Oui, nous proposons des contrats de maintenance et d'infogérance adaptés à vos besoins, 
+                    avec support 24/7 disponible.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>🎓 Proposez-vous des formations ?</h3>
+                    <p>Oui, nous formons vos équipes sur les technologies déployées : administration système, 
+                    sécurité, réseau, outils de supervision, etc.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>📄 Êtes-vous certifiés ?</h3>
+                    <p>Oui, notre équipe possède de nombreuses certifications : Fortinet NSE, Palo Alto, 
+                    Cisco, Ekahau, et bien d'autres.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-minimal">
+        <div class="container">
+            <div class="footer-content-minimal">
+                <div class="footer-brand">
+                    <h3>Webit<strong>AI</strong></h3>
+                    <p>Expert Infrastructure IT<br>
+                    <small>France • Gabon</small></p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Accueil</a>
+                    <a href="services.html">Services</a>
+                    <a href="infogerance.html">Infogérance</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Webit AI. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
