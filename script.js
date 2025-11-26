@@ -10,7 +10,7 @@ hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('active');
 });
 
-// Fermer le menu lors du clic sur un lien
+// Fermer le menu mobile au clic sur un lien
 document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
         hamburger.classList.remove('active');
@@ -40,32 +40,23 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // ============================================
-// FORM VALIDATION
+// NAVBAR SCROLL EFFECT
 // ============================================
 
-const contactForm = document.querySelector('.contact-form');
+const navbar = document.querySelector('.navbar');
+let lastScroll = 0;
 
-if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-        const name = document.getElementById('name').value.trim();
-        const email = document.getElementById('email').value.trim();
-        const service = document.getElementById('service').value;
-        const message = document.getElementById('message').value.trim();
-        
-        if (!name || !email || !service || !message) {
-            alert('Veuillez remplir tous les champs obligatoires.');
-            e.preventDefault();
-            return false;
-        }
-        
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(email)) {
-            alert('Veuillez entrer une adresse email valide.');
-            e.preventDefault();
-            return false;
-        }
-    });
-}
+window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset;
+    
+    if (currentScroll > 100) {
+        navbar.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+    } else {
+        navbar.style.boxShadow = 'none';
+    }
+    
+    lastScroll = currentScroll;
+});
 
 // ============================================
 // SCROLL ANIMATIONS
@@ -85,97 +76,54 @@ const fadeInObserver = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Animer les éléments
-document.querySelectorAll('.service-item, .expertise-card, .realisation-card').forEach((el, index) => {
+// Animer les cartes de services
+document.querySelectorAll('.service-card-minimal, .expertise-box').forEach((el, index) => {
     el.style.opacity = '0';
-    el.style.transform = 'translateY(20px)';
-    el.style.transition = `all 0.6s ease ${index * 0.05}s`;
+    el.style.transform = 'translateY(30px)';
+    el.style.transition = `all 0.6s ease ${index * 0.1}s`;
     fadeInObserver.observe(el);
 });
 
 // ============================================
-// ACTIVE NAVIGATION
+// SCROLL INDICATOR ANIMATION
 // ============================================
 
-window.addEventListener('scroll', () => {
-    let current = '';
-    const sections = document.querySelectorAll('section[id]');
-    
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (window.pageYOffset >= (sectionTop - 100)) {
-            current = section.getAttribute('id');
-        }
-    });
-    
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${current}`) {
-            link.classList.add('active');
-        }
-    });
-});
-
-// ============================================
-// BACK TO TOP BUTTON
-// ============================================
-
-const createBackToTop = () => {
-    const button = document.createElement('button');
-    button.innerHTML = '↑';
-    button.className = 'back-to-top';
-    button.style.cssText = `
-        position: fixed;
-        bottom: 30px;
-        right: 30px;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        background: #2563eb;
-        color: white;
-        border: none;
-        font-size: 20px;
-        cursor: pointer;
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.3s;
-        z-index: 999;
-        box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
-        font-weight: bold;
-    `;
-    
-    document.body.appendChild(button);
-    
+const scrollIndicator = document.querySelector('.scroll-indicator');
+if (scrollIndicator) {
     window.addEventListener('scroll', () => {
-        if (window.pageYOffset > 300) {
-            button.style.opacity = '1';
-            button.style.visibility = 'visible';
+        if (window.pageYOffset > 200) {
+            scrollIndicator.style.opacity = '0';
         } else {
-            button.style.opacity = '0';
-            button.style.visibility = 'hidden';
+            scrollIndicator.style.opacity = '1';
         }
     });
-    
-    button.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
-    
-    button.addEventListener('mouseenter', () => {
-        button.style.transform = 'scale(1.1)';
-        button.style.background = '#1d4ed8';
-    });
-    
-    button.addEventListener('mouseleave', () => {
-        button.style.transform = 'scale(1)';
-        button.style.background = '#2563eb';
-    });
-};
+}
 
-createBackToTop();
+// ============================================
+// FORM VALIDATION
+// ============================================
+
+const form = document.querySelector('.contact-form-minimal form');
+if (form) {
+    form.addEventListener('submit', function(e) {
+        const inputs = form.querySelectorAll('input[required], select[required], textarea[required]');
+        let isValid = true;
+        
+        inputs.forEach(input => {
+            if (!input.value.trim()) {
+                isValid = false;
+                input.style.borderColor = '#ef4444';
+            } else {
+                input.style.borderColor = '#d1d5db';
+            }
+        });
+        
+        if (!isValid) {
+            e.preventDefault();
+            alert('Veuillez remplir tous les champs obligatoires.');
+        }
+    });
+}
 
 // ============================================
 // CONSOLE MESSAGE
