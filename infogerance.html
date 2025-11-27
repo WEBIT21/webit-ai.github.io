@@ -64,34 +64,76 @@
                 </p>
             </div>
 
-            <!-- Diagramme 4 piliers -->
+            <!-- Diagramme 4 piliers animé -->
             <div class="diagram-container">
-                <svg width="600" height="400" viewBox="0 0 600 400" class="piliers-diagram">
-                    <!-- Centre -->
-                    <circle cx="300" cy="200" r="60" fill="#3b82f6" opacity="0.1"/>
-                    <text x="300" y="205" text-anchor="middle" fill="#1e40af" font-size="16" font-weight="600">Performance</text>
+                <div class="piliers-diagram-animated">
                     
-                    <!-- Disponibilité (haut) -->
-                    <circle cx="300" cy="80" r="50" fill="#3b82f6" opacity="0.2"/>
-                    <text x="300" y="85" text-anchor="middle" fill="#1e40af" font-size="14" font-weight="600">Disponibilité</text>
-                    <line x1="300" y1="140" x2="300" y2="130" stroke="#3b82f6" stroke-width="2"/>
-                    
-                    <!-- Sécurité (droite) -->
-                    <circle cx="450" cy="200" r="50" fill="#3b82f6" opacity="0.2"/>
-                    <text x="450" y="205" text-anchor="middle" fill="#1e40af" font-size="14" font-weight="600">Sécurité</text>
-                    <line x1="360" y1="200" x2="400" y2="200" stroke="#3b82f6" stroke-width="2"/>
-                    
-                    <!-- Utilisateurs (bas) -->
-                    <circle cx="300" cy="320" r="50" fill="#3b82f6" opacity="0.2"/>
-                    <text x="300" y="325" text-anchor="middle" fill="#1e40af" font-size="14" font-weight="600">Gestion</text>
-                    <text x="300" y="340" text-anchor="middle" fill="#1e40af" font-size="14" font-weight="600">utilisateurs</text>
-                    <line x1="300" y1="260" x2="300" y2="270" stroke="#3b82f6" stroke-width="2"/>
-                    
-                    <!-- Performance (gauche) -->
-                    <circle cx="150" cy="200" r="50" fill="#3b82f6" opacity="0.2"/>
-                    <text x="150" y="205" text-anchor="middle" fill="#1e40af" font-size="14" font-weight="600">Performance</text>
-                    <line x1="240" y1="200" x2="200" y2="200" stroke="#3b82f6" stroke-width="2"/>
-                </svg>
+                    <!-- Centre - Performance -->
+                    <div class="pilier-center">
+                        <div class="pilier-icon-circle pulse">
+                            <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M3 3v18h18" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M18 17l-5-5-4 4-4-7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <p>Performance</p>
+                    </div>
+
+                    <!-- Haut - Disponibilité -->
+                    <div class="pilier-item pilier-top">
+                        <div class="pilier-icon-circle">
+                            <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <circle cx="12" cy="12" r="10" stroke-width="2"/>
+                                <path d="M12 6v6l4 2" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <p>Disponibilité</p>
+                        <div class="connecting-line line-top"></div>
+                    </div>
+
+                    <!-- Droite - Sécurité -->
+                    <div class="pilier-item pilier-right">
+                        <div class="pilier-icon-circle">
+                            <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <rect x="5" y="11" width="14" height="10" rx="2" stroke-width="2"/>
+                                <path d="M7 11V7a5 5 0 0110 0v4" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <p>Sécurité de<br>l'information</p>
+                        <div class="connecting-line line-right"></div>
+                    </div>
+
+                    <!-- Bas - Gestion utilisateurs -->
+                    <div class="pilier-item pilier-bottom">
+                        <div class="pilier-icon-circle">
+                            <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <circle cx="9" cy="7" r="4" stroke-width="2"/>
+                                <path d="M3 21v-2a4 4 0 014-4h4a4 4 0 014 4v2" stroke-width="2"/>
+                                <circle cx="17" cy="10" r="3" stroke-width="2"/>
+                                <path d="M21 21v-1a3 3 0 00-3-3h-1" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <p>Gestion<br>utilisateurs</p>
+                        <div class="connecting-line line-bottom"></div>
+                    </div>
+
+                    <!-- Gauche - Infrastructures -->
+                    <div class="pilier-item pilier-left">
+                        <div class="pilier-icon-circle">
+                            <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <rect x="2" y="3" width="6" height="7" stroke-width="2"/>
+                                <rect x="10" y="3" width="6" height="7" stroke-width="2"/>
+                                <rect x="18" y="3" width="4" height="7" stroke-width="2"/>
+                                <rect x="2" y="14" width="6" height="7" stroke-width="2"/>
+                                <rect x="10" y="14" width="6" height="7" stroke-width="2"/>
+                                <rect x="18" y="14" width="4" height="7" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <p>Gestion des<br>infrastructures</p>
+                        <div class="connecting-line line-left"></div>
+                    </div>
+
+                </div>
             </div>
 
             <div class="objectifs-questions">
