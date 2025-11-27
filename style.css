@@ -752,6 +752,281 @@ body {
     display: flex;
     justify-content: center;
     margin: 60px 0;
+    padding: 60px 0;
+}
+
+.piliers-diagram-animated {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    margin: 0 auto;
+}
+
+/* Centre - Performance */
+.pilier-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 10;
+}
+
+.pilier-center .pilier-icon-circle {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 40px rgba(37, 99, 235, 0.4);
+    margin: 0 auto 15px;
+    color: white;
+    position: relative;
+}
+
+.pilier-center .pilier-icon-circle::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: inherit;
+    z-index: -1;
+}
+
+.pilier-center p {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1e40af;
+}
+
+/* Animation pulse au centre */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 10px 40px rgba(37, 99, 235, 0.4);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 15px 50px rgba(37, 99, 235, 0.6);
+    }
+}
+
+.pulse {
+    animation: pulse 3s ease-in-out infinite;
+}
+
+/* Piliers autour */
+.pilier-item {
+    position: absolute;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.pilier-item:hover {
+    transform: scale(1.1);
+}
+
+.pilier-item .pilier-icon-circle {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);
+    margin: 0 auto 15px;
+    color: white;
+    transition: all 0.3s;
+    position: relative;
+}
+
+.pilier-item:hover .pilier-icon-circle {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(255, 107, 53, 0.5);
+}
+
+.pilier-item p {
+    font-size: 15px;
+    font-weight: 600;
+    color: #1a1a1a;
+    line-height: 1.4;
+}
+
+/* Positions des piliers */
+.pilier-top {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.pilier-right {
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.pilier-bottom {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.pilier-left {
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+/* Lignes de connexion */
+.connecting-line {
+    position: absolute;
+    background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+    z-index: 1;
+}
+
+.line-top {
+    width: 3px;
+    height: 80px;
+    bottom: -95px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: lineGrow 1s ease-out forwards;
+    transform-origin: top;
+}
+
+.line-right {
+    width: 80px;
+    height: 3px;
+    left: -95px;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: lineGrowHorizontal 1s ease-out 0.2s forwards;
+    transform-origin: right;
+}
+
+.line-bottom {
+    width: 3px;
+    height: 80px;
+    top: -95px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: lineGrow 1s ease-out 0.4s forwards;
+    transform-origin: bottom;
+}
+
+.line-left {
+    width: 80px;
+    height: 3px;
+    right: -95px;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: lineGrowHorizontal 1s ease-out 0.6s forwards;
+    transform-origin: left;
+}
+
+@keyframes lineGrow {
+    from {
+        height: 0;
+        opacity: 0;
+    }
+    to {
+        height: 80px;
+        opacity: 1;
+    }
+}
+
+@keyframes lineGrowHorizontal {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+    to {
+        width: 80px;
+        opacity: 1;
+    }
+}
+
+/* Animation au scroll */
+.pilier-item {
+    opacity: 0;
+    animation: fadeInScale 0.6s ease-out forwards;
+}
+
+.pilier-top {
+    animation-delay: 0.2s;
+}
+
+.pilier-right {
+    animation-delay: 0.4s;
+}
+
+.pilier-bottom {
+    animation-delay: 0.6s;
+}
+
+.pilier-left {
+    animation-delay: 0.8s;
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Responsive diagramme */
+@media (max-width: 768px) {
+    .piliers-diagram-animated {
+        width: 400px;
+        height: 400px;
+    }
+    
+    .pilier-center .pilier-icon-circle {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .pilier-item .pilier-icon-circle {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .pilier-item p {
+        font-size: 13px;
+    }
+    
+    .line-top,
+    .line-bottom {
+        height: 50px;
+        bottom: -65px;
+    }
+    
+    .line-bottom {
+        top: -65px;
+    }
+    
+    .line-right,
+    .line-left {
+        width: 50px;
+    }
+    
+    .line-right {
+        left: -65px;
+    }
+    
+    .line-left {
+        right: -65px;
+    }
 }
 
 .piliers-diagram {
