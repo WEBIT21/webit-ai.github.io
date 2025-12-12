@@ -14,7 +14,7 @@ class WebitChatbot {
     this.messages = [
       {
         role: 'assistant',
-        content: "Bonjour ! 👋\n\nJe suis l'assistant virtuel de Webit-AI.\n\nComment puis-je vous aider concernant nos services informatiques ?"
+        content: "Bonjour ! 👋\n\nJe suis l'assistant virtuel Webit-AI.\n\nComment puis-je vous aider concernant nos services informatiques ?"
       }
     ];
     this.init();
