@@ -194,149 +194,173 @@
     </section>
 
     <!-- ══════════════════════════════════════
-         RÉFÉRENCES & PARTENAIRES — DÉFILEMENT
+         RÉFÉRENCES & PARTENAIRES
     ══════════════════════════════════════ -->
-    <section class="clients-section" style="background:#f8f9fa; padding:4rem 0; overflow:hidden;">
-        <div class="container">
+    <section style="background:#0b1735; padding:5rem 0 4rem; overflow:hidden; border-top:1px solid rgba(255,255,255,0.06);">
 
-            <!-- ── MISSIONS ── -->
-            <h2 class="clients-title" style="margin-bottom:0.5rem;">Missions réalisées</h2>
-            <p style="text-align:center; color:#888; font-size:0.9rem; margin-bottom:2rem;">
-                Interventions terrain en tant que consultant indépendant
-            </p>
+        <!-- MISSIONS -->
+        <div class="container" style="text-align:center; margin-bottom:2.5rem;">
+            <p style="color:#5c7cfa; font-size:0.7rem; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; margin-bottom:0.6rem;">Expérience terrain</p>
+            <h2 style="color:#fff; font-size:1.85rem; font-weight:700; margin:0 0 0.4rem;">Missions réalisées</h2>
+            <p style="color:rgba(255,255,255,0.4); font-size:0.85rem; margin:0;">Interventions en tant que consultant indépendant</p>
         </div>
 
-        <!-- Piste défilante missions -->
-        <div class="marquee-outer">
-            <div class="marquee-track" id="marquee-missions">
+        <div class="mq-outer">
+            <div class="mq-track mq-speed-normal">
 
-                <!-- BAA Training -->
-                <div class="marquee-card mission-card">
-                    <div class="mc-icon">✈️</div>
-                    <div>
-                        <div class="mc-title">BAA Training</div>
-                        <div class="mc-sub">Aviation Academy</div>
-                        <div class="mc-loc">Massy-Palaiseau · Vilnius · Londres</div>
+                <div class="mq-card mq-mission">
+                    <div class="mq-avatar" style="background:linear-gradient(135deg,#1565c0,#1e88e5);">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
                     </div>
-                </div>
-
-                <!-- Groupe ADP -->
-                <div class="marquee-card mission-card">
-                    <div class="mc-icon">🛫</div>
                     <div>
-                        <div class="mc-title">Groupe ADP</div>
-                        <div class="mc-sub">Aéroports de Paris</div>
-                        <div class="mc-loc">Réseau & Sécurité · Île-de-France</div>
+                        <div class="mq-name">BAA Training</div>
+                        <div class="mq-role">Aviation Academy</div>
+                        <div class="mq-meta">Massy-Palaiseau · Vilnius · Londres</div>
                     </div>
                 </div>
 
-                <!-- Acorus -->
-                <div class="marquee-card mission-card">
-                    <div class="mc-icon">🏗️</div>
+                <div class="mq-card mq-mission">
+                    <div class="mq-avatar" style="background:linear-gradient(135deg,#0d47a1,#1976d2);">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                    </div>
                     <div>
-                        <div class="mc-title">Acorus</div>
-                        <div class="mc-sub">Rénovation & Facility</div>
-                        <div class="mc-loc">Infrastructure IT · France & International</div>
+                        <div class="mq-name">Groupe ADP</div>
+                        <div class="mq-role">Aéroports de Paris</div>
+                        <div class="mq-meta">Réseau & Sécurité · Île-de-France</div>
                     </div>
                 </div>
 
-                <!-- Duplicates pour boucle infinie -->
-                <div class="marquee-card mission-card">
-                    <div class="mc-icon">✈️</div>
+                <div class="mq-card mq-mission">
+                    <div class="mq-avatar" style="background:linear-gradient(135deg,#00695c,#00897b);">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+                    </div>
                     <div>
-                        <div class="mc-title">BAA Training</div>
-                        <div class="mc-sub">Aviation Academy</div>
-                        <div class="mc-loc">Massy-Palaiseau · Vilnius · Londres</div>
+                        <div class="mq-name">Acorus</div>
+                        <div class="mq-role">Rénovation & Facility</div>
+                        <div class="mq-meta">Infrastructure IT · France & International</div>
                     </div>
                 </div>
-                <div class="marquee-card mission-card">
-                    <div class="mc-icon">🛫</div>
+
+                <!-- doublons -->
+                <div class="mq-card mq-mission">
+                    <div class="mq-avatar" style="background:linear-gradient(135deg,#1565c0,#1e88e5);">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                    </div>
                     <div>
-                        <div class="mc-title">Groupe ADP</div>
-                        <div class="mc-sub">Aéroports de Paris</div>
-                        <div class="mc-loc">Réseau & Sécurité · Île-de-France</div>
+                        <div class="mq-name">BAA Training</div>
+                        <div class="mq-role">Aviation Academy</div>
+                        <div class="mq-meta">Massy-Palaiseau · Vilnius · Londres</div>
                     </div>
                 </div>
-                <div class="marquee-card mission-card">
-                    <div class="mc-icon">🏗️</div>
+                <div class="mq-card mq-mission">
+                    <div class="mq-avatar" style="background:linear-gradient(135deg,#0d47a1,#1976d2);">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                    </div>
                     <div>
-                        <div class="mc-title">Acorus</div>
-                        <div class="mc-sub">Rénovation & Facility</div>
-                        <div class="mc-loc">Infrastructure IT · France & International</div>
+                        <div class="mq-name">Groupe ADP</div>
+                        <div class="mq-role">Aéroports de Paris</div>
+                        <div class="mq-meta">Réseau & Sécurité · Île-de-France</div>
+                    </div>
+                </div>
+                <div class="mq-card mq-mission">
+                    <div class="mq-avatar" style="background:linear-gradient(135deg,#00695c,#00897b);">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+                    </div>
+                    <div>
+                        <div class="mq-name">Acorus</div>
+                        <div class="mq-role">Rénovation & Facility</div>
+                        <div class="mq-meta">Infrastructure IT · France & International</div>
                     </div>
                 </div>
 
             </div>
         </div>
 
-        <div class="container" style="margin-top:3.5rem;">
-            <!-- ── PARTENAIRES ── -->
-            <h2 class="clients-title" style="margin-bottom:0.5rem;">Partenaires technologiques</h2>
-            <p style="text-align:center; color:#888; font-size:0.9rem; margin-bottom:2rem;">
-                Solutions déployées et certifications obtenues
-            </p>
+        <!-- Séparateur -->
+        <div style="height:1px; background:rgba(255,255,255,0.07); margin:3.5rem 0;"></div>
+
+        <!-- PARTENAIRES -->
+        <div class="container" style="text-align:center; margin-bottom:2.5rem;">
+            <p style="color:#5c7cfa; font-size:0.7rem; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; margin-bottom:0.6rem;">Certifications & Alliances</p>
+            <h2 style="color:#fff; font-size:1.85rem; font-weight:700; margin:0 0 0.4rem;">Partenaires technologiques</h2>
+            <p style="color:rgba(255,255,255,0.4); font-size:0.85rem; margin:0;">Solutions certifiées et déployées en production</p>
         </div>
 
-        <!-- Piste défilante partenaires -->
-        <div class="marquee-outer">
-            <div class="marquee-track" id="marquee-partners">
+        <div class="mq-outer">
+            <div class="mq-track mq-speed-slow">
 
                 <!-- Fortinet -->
-                <div class="marquee-card partner-card fortinet-card">
-                    <div style="position:absolute; top:-11px; left:50%; transform:translateX(-50%); background:#ee3124; color:#fff; font-size:0.6rem; font-weight:700; padding:0.18rem 0.7rem; border-radius:99px; white-space:nowrap; letter-spacing:0.05em;">✓ PARTENAIRE CERTIFIÉ</div>
-                    <div class="mc-icon">🔥</div>
-                    <div class="mc-title" style="color:#ee3124;">Fortinet</div>
-                    <div class="mc-sub">Integrator Partner</div>
+                <div class="mq-card mq-partner mq-fortinet">
+                    <div class="mq-certified">✓ CERTIFIÉ INTÉGRATEUR</div>
+                    <div class="mq-plogo" style="background:rgba(238,49,36,0.12); border:1px solid rgba(238,49,36,0.25);">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#ee3124" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <div class="mq-name" style="color:#fff;">Fortinet</div>
+                    <div class="mq-role" style="color:#ee3124; font-weight:700;">Integrator Partner</div>
                 </div>
 
                 <!-- Bitdefender -->
-                <div class="marquee-card partner-card">
-                    <div class="mc-icon">🛡️</div>
-                    <div class="mc-title" style="color:#e1001a;">Bitdefender</div>
-                    <div class="mc-sub">Partenaire revendeur</div>
-                    <div class="mc-loc">GravityZone XDR · EDR</div>
+                <div class="mq-card mq-partner">
+                    <div class="mq-plogo" style="background:rgba(225,0,26,0.08); border:1px solid rgba(225,0,26,0.15);">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#e1001a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+                    </div>
+                    <div class="mq-name" style="color:#fff;">Bitdefender</div>
+                    <div class="mq-role">Partenaire revendeur</div>
+                    <div class="mq-meta">GravityZone XDR · EDR</div>
                 </div>
 
                 <!-- Ingram Micro -->
-                <div class="marquee-card partner-card">
-                    <div class="mc-icon">📦</div>
-                    <div class="mc-title" style="color:#0057a8;">Ingram Micro</div>
-                    <div class="mc-sub">Distributeur IT</div>
-                    <div class="mc-loc">Distribution & approvisionnement</div>
+                <div class="mq-card mq-partner">
+                    <div class="mq-plogo" style="background:rgba(0,87,168,0.1); border:1px solid rgba(0,87,168,0.2);">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0091d5" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><line x1="12" y1="12" x2="12" y2="22"/><line x1="3.27" y1="6.96" x2="12" y2="12"/><line x1="20.73" y1="6.96" x2="12" y2="12"/></svg>
+                    </div>
+                    <div class="mq-name" style="color:#fff;">Ingram Micro</div>
+                    <div class="mq-role">Distributeur IT</div>
+                    <div class="mq-meta">Distribution & approvisionnement</div>
                 </div>
 
                 <!-- Ekahau -->
-                <div class="marquee-card partner-card">
-                    <div class="mc-icon">📡</div>
-                    <div class="mc-title" style="color:#f57c00;">Ekahau</div>
-                    <div class="mc-sub">WiFi Design & Survey</div>
-                    <div class="mc-loc">Site Survey · Heatmaps RF</div>
+                <div class="mq-card mq-partner">
+                    <div class="mq-plogo" style="background:rgba(245,124,0,0.08); border:1px solid rgba(245,124,0,0.2);">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#f57c00" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2"/><path d="M16.24 7.76a6 6 0 0 1 0 8.49m-8.48-.01a6 6 0 0 1 0-8.49m11.31-2.82a10 10 0 0 1 0 14.14m-14.14 0a10 10 0 0 1 0-14.14"/></svg>
+                    </div>
+                    <div class="mq-name" style="color:#fff;">Ekahau</div>
+                    <div class="mq-role">WiFi Design & Survey</div>
+                    <div class="mq-meta">Site Survey · Heatmaps RF</div>
                 </div>
 
-                <!-- Duplicates pour boucle infinie -->
-                <div class="marquee-card partner-card fortinet-card">
-                    <div style="position:absolute; top:-11px; left:50%; transform:translateX(-50%); background:#ee3124; color:#fff; font-size:0.6rem; font-weight:700; padding:0.18rem 0.7rem; border-radius:99px; white-space:nowrap; letter-spacing:0.05em;">✓ PARTENAIRE CERTIFIÉ</div>
-                    <div class="mc-icon">🔥</div>
-                    <div class="mc-title" style="color:#ee3124;">Fortinet</div>
-                    <div class="mc-sub">Integrator Partner</div>
+                <!-- doublons -->
+                <div class="mq-card mq-partner mq-fortinet">
+                    <div class="mq-certified">✓ CERTIFIÉ INTÉGRATEUR</div>
+                    <div class="mq-plogo" style="background:rgba(238,49,36,0.12); border:1px solid rgba(238,49,36,0.25);">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#ee3124" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <div class="mq-name" style="color:#fff;">Fortinet</div>
+                    <div class="mq-role" style="color:#ee3124; font-weight:700;">Integrator Partner</div>
                 </div>
-                <div class="marquee-card partner-card">
-                    <div class="mc-icon">🛡️</div>
-                    <div class="mc-title" style="color:#e1001a;">Bitdefender</div>
-                    <div class="mc-sub">Partenaire revendeur</div>
-                    <div class="mc-loc">GravityZone XDR · EDR</div>
+                <div class="mq-card mq-partner">
+                    <div class="mq-plogo" style="background:rgba(225,0,26,0.08); border:1px solid rgba(225,0,26,0.15);">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#e1001a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+                    </div>
+                    <div class="mq-name" style="color:#fff;">Bitdefender</div>
+                    <div class="mq-role">Partenaire revendeur</div>
+                    <div class="mq-meta">GravityZone XDR · EDR</div>
                 </div>
-                <div class="marquee-card partner-card">
-                    <div class="mc-icon">📦</div>
-                    <div class="mc-title" style="color:#0057a8;">Ingram Micro</div>
-                    <div class="mc-sub">Distributeur IT</div>
-                    <div class="mc-loc">Distribution & approvisionnement</div>
+                <div class="mq-card mq-partner">
+                    <div class="mq-plogo" style="background:rgba(0,87,168,0.1); border:1px solid rgba(0,87,168,0.2);">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0091d5" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><line x1="12" y1="12" x2="12" y2="22"/><line x1="3.27" y1="6.96" x2="12" y2="12"/><line x1="20.73" y1="6.96" x2="12" y2="12"/></svg>
+                    </div>
+                    <div class="mq-name" style="color:#fff;">Ingram Micro</div>
+                    <div class="mq-role">Distributeur IT</div>
+                    <div class="mq-meta">Distribution & approvisionnement</div>
                 </div>
-                <div class="marquee-card partner-card">
-                    <div class="mc-icon">📡</div>
-                    <div class="mc-title" style="color:#f57c00;">Ekahau</div>
-                    <div class="mc-sub">WiFi Design & Survey</div>
-                    <div class="mc-loc">Site Survey · Heatmaps RF</div>
+                <div class="mq-card mq-partner">
+                    <div class="mq-plogo" style="background:rgba(245,124,0,0.08); border:1px solid rgba(245,124,0,0.2);">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#f57c00" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2"/><path d="M16.24 7.76a6 6 0 0 1 0 8.49m-8.48-.01a6 6 0 0 1 0-8.49m11.31-2.82a10 10 0 0 1 0 14.14m-14.14 0a10 10 0 0 1 0-14.14"/></svg>
+                    </div>
+                    <div class="mq-name" style="color:#fff;">Ekahau</div>
+                    <div class="mq-role">WiFi Design & Survey</div>
+                    <div class="mq-meta">Site Survey · Heatmaps RF</div>
                 </div>
 
             </div>
@@ -345,325 +369,99 @@
     </section>
 
     <style>
-        /* ── MARQUEE ── */
-        .marquee-outer {
+        .mq-outer {
             overflow: hidden;
             width: 100%;
-            position: relative;
-            /* Fondu sur les bords */
             -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
             mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
         }
-
-        .marquee-track {
+        .mq-track {
             display: flex;
-            gap: 1.25rem;
+            gap: 1rem;
             width: max-content;
-            animation: marquee-scroll 28s linear infinite;
-            padding: 0.75rem 0;
+            padding: 0.75rem 0.5rem 1rem;
         }
-        .marquee-track:hover { animation-play-state: paused; }
-
-        @keyframes marquee-scroll {
-            0%   { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
+        .mq-track:hover { animation-play-state: paused; }
+        .mq-speed-normal { animation: mq-scroll 28s linear infinite; }
+        .mq-speed-slow   { animation: mq-scroll 34s linear infinite; }
+        @keyframes mq-scroll {
+            from { transform: translateX(0); }
+            to   { transform: translateX(-50%); }
         }
 
         /* Carte commune */
-        .marquee-card {
+        .mq-card {
             flex-shrink: 0;
-            width: 240px;
-            background: #fff;
-            border: 1px solid #e0e0e0;
-            border-radius: 12px;
-            padding: 1.25rem 1.25rem 1.25rem 1.25rem;
+            border-radius: 14px;
             position: relative;
-            transition: box-shadow 0.2s;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.09);
+            transition: transform 0.25s, background 0.25s;
         }
-        .marquee-card:hover { box-shadow: 0 6px 20px rgba(26,35,126,0.1); }
+        .mq-card:hover {
+            transform: translateY(-3px);
+            background: rgba(255,255,255,0.09);
+        }
 
-        /* Mission — bordure gauche bleue + flex */
-        .mission-card {
-            border-left: 4px solid #1565c0;
+        /* Mission */
+        .mq-mission {
             display: flex;
             align-items: center;
             gap: 1rem;
+            width: 285px;
+            padding: 1.1rem 1.25rem;
+            border-left: 3px solid #1565c0;
+        }
+        .mq-avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
         }
 
-        /* Partenaire — centré */
-        .partner-card { text-align: center; }
-
-        /* Fortinet — bordure rouge */
-        .fortinet-card {
-            border: 2px solid #ee3124;
-            box-shadow: 0 4px 16px rgba(238,49,36,0.1);
+        /* Partenaire */
+        .mq-partner {
+            width: 185px;
+            padding: 1.75rem 1.25rem 1.25rem;
+            text-align: center;
+        }
+        .mq-plogo {
+            width: 54px;
+            height: 54px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 0.85rem;
+        }
+        .mq-fortinet {
+            border: 1px solid rgba(238,49,36,0.35);
+            background: rgba(238,49,36,0.07);
+            box-shadow: 0 0 24px rgba(238,49,36,0.12);
+        }
+        .mq-certified {
+            position: absolute;
+            top: -11px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #ee3124;
+            color: #fff;
+            font-size: 0.58rem;
+            font-weight: 800;
+            padding: 0.2rem 0.75rem;
+            border-radius: 99px;
+            white-space: nowrap;
+            letter-spacing: 0.09em;
         }
 
-        .mc-icon { font-size: 1.6rem; margin-bottom: 0.4rem; flex-shrink: 0; }
-        .mission-card .mc-icon { margin-bottom: 0; }
-
-        .mc-title { font-size: 1rem; font-weight: 800; color: #1a237e; margin-bottom: 0.15rem; }
-        .mc-sub   { font-size: 0.72rem; color: #666; font-weight: 600; margin-bottom: 0.15rem; }
-        .mc-loc   { font-size: 0.68rem; color: #aaa; }
+        /* Typo */
+        .mq-name { font-size: 0.95rem; font-weight: 700; color: #fff; margin-bottom: 0.2rem; }
+        .mq-role { font-size: 0.71rem; font-weight: 600; color: rgba(255,255,255,0.5); margin-bottom: 0.15rem; }
+        .mq-meta { font-size: 0.64rem; color: rgba(255,255,255,0.28); }
     </style>
-
-    <!-- Call to Action -->
-    <section class="cta-minimal">
-        <div class="container">
-            <div class="cta-content-center">
-                <h2>Un projet IT ?</h2>
-                <p>Discutons de vos besoins en infrastructure</p>
-                <a href="contact.html" class="btn btn-primary-large">Demander un devis gratuit</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer-minimal">
-        <div class="container">
-            <div class="footer-content-minimal">
-                <div class="footer-brand">
-                    <h3>Webit<strong>AI</strong></h3>
-                    <p>Expert Infrastructure IT<br>
-                    <small>France • Gabon</small></p>
-                </div>
-                <div class="footer-links">
-                    <a href="index.html">Accueil</a>
-                    <a href="services.html">Services</a>
-                    <a href="infogerance.html">Infogérance</a>
-                    <a href="contact.html">Contact</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Webit AI. Tous droits réservés.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
-    <script src="chatbot.js"></script>
-</body>
-</html>                </div>
-                <div class="stat-item">
-                    <div class="stat-number">50+</div>
-                    <div class="stat-label">Projets réalisés</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">24/7</div>
-                    <div class="stat-label">Support disponible</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Bande colorée -->
-    <section class="banner-section">
-        <div class="banner-content">
-            <h2>Une offre de services développée autour de 7 métiers complémentaires</h2>
-        </div>
-        <div class="banner-arrow"></div>
-    </section>
-
-    <!-- Section Services -->
-    <section class="services-minimal">
-        <div class="container">
-            <div class="section-header-center">
-                <h2>Nos Services</h2>
-                <p>Une expertise complète pour votre infrastructure IT</p>
-            </div>
-
-            <div class="services-grid-minimal">
-                
-                <div class="service-card-minimal">
-                    <div class="service-icon-minimal">💻</div>
-                    <h3>Administration Système</h3>
-                    <p>Gestion complète de vos serveurs Windows et Linux. Virtualisation, monitoring et maintenance proactive.</p>
-                    <ul>
-                        <li>Windows Server & Active Directory</li>
-                        <li>Linux (RedHat, Ubuntu, CentOS)</li>
-                        <li>VMware, Hyper-V, Proxmox</li>
-                        <li>Monitoring & Maintenance</li>
-                    </ul>
-                    <a href="services.html#systeme" class="service-link">En savoir plus →</a>
-                </div>
-
-                <div class="service-card-minimal">
-                    <div class="service-icon-minimal">🌐</div>
-                    <h3>Infrastructure Réseau</h3>
-                    <p>Conception et déploiement d'architectures réseau performantes, sécurisées et évolutives.</p>
-                    <ul>
-                        <li>Architecture LAN/WAN & VLAN</li>
-                        <li>Cisco, Aruba, HP</li>
-                        <li>VPN & Interconnexion sites</li>
-                        <li>F5 Load Balancing</li>
-                    </ul>
-                    <a href="services.html#reseau" class="service-link">En savoir plus →</a>
-                </div>
-
-                <div class="service-card-minimal featured-card">
-                    <div class="service-icon-minimal">🛡️</div>
-                    <h3>Sécurité Informatique</h3>
-                    <p>Protection complète : firewall nouvelle génération, EDR, audits de sécurité et mise en conformité.</p>
-                    <ul>
-                        <li>Fortinet FortiGate, Palo Alto</li>
-                        <li>EDR : SentinelOne, Wazuh</li>
-                        <li>Audits & Conformité</li>
-                        <li>RGPD & ISO27001</li>
-                    </ul>
-                    <span class="featured-badge">Expertise certifiée</span>
-                    <a href="services.html#securite" class="service-link">En savoir plus →</a>
-                </div>
-
-                <div class="service-card-minimal">
-                    <div class="service-icon-minimal">📡</div>
-                    <h3>WiFi Professionnel</h3>
-                    <p>Déploiement de réseaux WiFi haute performance avec site survey Ekahau et gestion centralisée.</p>
-                    <ul>
-                        <li>Site Survey & Design RF</li>
-                        <li>Aruba, Cisco Meraki, Ruckus</li>
-                        <li>802.1X & Portail captif</li>
-                        <li>Gestion cloud Aruba Central</li>
-                    </ul>
-                    <a href="services.html#wifi" class="service-link">En savoir plus →</a>
-                </div>
-
-                <div class="service-card-minimal">
-                    <div class="service-icon-minimal">📹</div>
-                    <h3>Vidéosurveillance IP</h3>
-                    <p>Systèmes de vidéosurveillance professionnels avec caméras 4K/8MP et analyse vidéo intelligente.</p>
-                    <ul>
-                        <li>Caméras IP 4K/8MP</li>
-                        <li>NVR & Stockage haute capacité</li>
-                        <li>Analyse vidéo IA</li>
-                        <li>Accès distant sécurisé</li>
-                    </ul>
-                    <a href="services.html#video" class="service-link">En savoir plus →</a>
-                </div>
-
-                <div class="service-card-minimal">
-                    <div class="service-icon-minimal">☁️</div>
-                    <h3>Cloud & Automatisation</h3>
-                    <p>Migration cloud et automatisation avec Ansible/Terraform pour optimiser vos infrastructures et réduire les coûts.</p>
-                    <ul>
-                        <li>Microsoft Azure, AWS, GCP</li>
-                        <li>Ansible/AWX, Terraform</li>
-                        <li>Infrastructure as Code</li>
-                        <li>DevOps & CI/CD</li>
-                    </ul>
-                    <a href="services.html#cloud" class="service-link">En savoir plus →</a>
-                </div>
-
-                <!-- ═══ CARTE STARLINK — NOUVELLE ═══ -->
-                <div class="service-card-minimal featured-card">
-                    <div class="service-icon-minimal">🛰️</div>
-                    <h3>Intégration Starlink</h3>
-                    <p>Déploiement terrain Starlink Business en France et en Afrique Centrale. Mise en service rapide et professionnelle après livraison du terminal.</p>
-                    <ul>
-                        <li>Étude de site & faisabilité</li>
-                        <li>Montage & orientation du terminal</li>
-                        <li>Câblage & protection électrique</li>
-                        <li>France & Gabon</li>
-                    </ul>
-                    <span class="featured-badge">Nouveau</span>
-                    <a href="services.html#starlink" class="service-link">En savoir plus →</a>
-                </div>
-                <!-- ═══ FIN CARTE STARLINK ═══ -->
-
-            </div>
-        </div>
-    </section>
-
-    <!-- ══════════════════════════════════════
-         RÉFÉRENCES & PARTENAIRES
-    ══════════════════════════════════════ -->
-    <section class="clients-section" style="background:#f8f9fa; padding:4rem 0;">
-        <div class="container">
-
-            <!-- ── MISSIONS ── -->
-            <h2 class="clients-title" style="margin-bottom:0.5rem;">Missions réalisées</h2>
-            <p style="text-align:center; color:#888; font-size:0.9rem; margin-bottom:2.5rem;">
-                Interventions terrain en tant que consultant indépendant
-            </p>
-
-            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:1.25rem; margin-bottom:3.5rem;">
-
-                <!-- BAA Training -->
-                <div style="background:#fff; border:1px solid #e0e0e0; border-left:4px solid #1565c0; border-radius:10px; padding:1.5rem; display:flex; align-items:center; gap:1rem;">
-                    <div style="font-size:2rem; flex-shrink:0;">✈️</div>
-                    <div>
-                        <div style="font-size:1rem; font-weight:700; color:#1a237e; margin-bottom:0.15rem;">BAA Training</div>
-                        <div style="font-size:0.78rem; color:#1565c0; font-weight:600; margin-bottom:0.25rem;">Aviation Academy</div>
-                        <div style="font-size:0.75rem; color:#888;">Infrastructure IT · Massy-Palaiseau, Vilnius & Londres</div>
-                    </div>
-                </div>
-
-                <!-- Groupe ADP / HUBONE -->
-                <div style="background:#fff; border:1px solid #e0e0e0; border-left:4px solid #1565c0; border-radius:10px; padding:1.5rem; display:flex; align-items:center; gap:1rem;">
-                    <div style="font-size:2rem; flex-shrink:0;">🛫</div>
-                    <div>
-                        <div style="font-size:1rem; font-weight:700; color:#1a237e; margin-bottom:0.15rem;">Groupe ADP</div>
-                        <div style="font-size:0.78rem; color:#1565c0; font-weight:600; margin-bottom:0.25rem;">Aéroports de Paris</div>
-                        <div style="font-size:0.75rem; color:#888;">Réseau & Sécurité · Île-de-France</div>
-                    </div>
-                </div>
-
-                <!-- Acorus -->
-                <div style="background:#fff; border:1px solid #e0e0e0; border-left:4px solid #1565c0; border-radius:10px; padding:1.5rem; display:flex; align-items:center; gap:1rem;">
-                    <div style="font-size:2rem; flex-shrink:0;">🏗️</div>
-                    <div>
-                        <div style="font-size:1rem; font-weight:700; color:#1a237e; margin-bottom:0.15rem;">Acorus</div>
-                        <div style="font-size:0.78rem; color:#1565c0; font-weight:600; margin-bottom:0.25rem;">Rénovation & Facility</div>
-                        <div style="font-size:0.75rem; color:#888;">Infrastructure IT · France & International</div>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- ── PARTENAIRES ── -->
-            <h2 class="clients-title" style="margin-bottom:0.5rem;">Partenaires technologiques</h2>
-            <p style="text-align:center; color:#888; font-size:0.9rem; margin-bottom:2.5rem;">
-                Solutions déployées et certifications obtenues
-            </p>
-
-            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px,1fr)); gap:1.25rem;">
-
-                <!-- Fortinet — mis en avant -->
-                <div style="background:#fff; border:2px solid #ee3124; border-radius:12px; padding:1.5rem 1.25rem; text-align:center; position:relative; box-shadow:0 4px 16px rgba(238,49,36,0.1);">
-                    <div style="position:absolute; top:-12px; left:50%; transform:translateX(-50%); background:#ee3124; color:#fff; font-size:0.65rem; font-weight:700; padding:0.2rem 0.75rem; border-radius:99px; white-space:nowrap; letter-spacing:0.05em;">✓ PARTENAIRE CERTIFIÉ</div>
-                    <div style="font-size:1.5rem; margin-bottom:0.5rem;">🔥</div>
-                    <div style="font-size:1.05rem; font-weight:800; color:#ee3124; letter-spacing:0.5px; margin-bottom:0.2rem;">Fortinet</div>
-                    <div style="font-size:0.72rem; color:#666; font-weight:600;">Integrator Partner</div>
-                    <div style="font-size:0.68rem; color:#999; margin-top:0.2rem;">FortiGate · FortiAnalyzer</div>
-                </div>
-
-                <!-- Bitdefender -->
-                <div style="background:#fff; border:1px solid #e0e0e0; border-radius:12px; padding:1.5rem 1.25rem; text-align:center; transition:box-shadow 0.2s;">
-                    <div style="font-size:1.5rem; margin-bottom:0.5rem;">🛡️</div>
-                    <div style="font-size:1.05rem; font-weight:800; color:#e1001a; letter-spacing:0.5px; margin-bottom:0.2rem;">Bitdefender</div>
-                    <div style="font-size:0.72rem; color:#666; font-weight:600;">Partenaire revendeur</div>
-                    <div style="font-size:0.68rem; color:#999; margin-top:0.2rem;">GravityZone XDR · EDR</div>
-                </div>
-
-                <!-- Ingram Micro -->
-                <div style="background:#fff; border:1px solid #e0e0e0; border-radius:12px; padding:1.5rem 1.25rem; text-align:center;">
-                    <div style="font-size:1.5rem; margin-bottom:0.5rem;">📦</div>
-                    <div style="font-size:1.05rem; font-weight:800; color:#0057a8; letter-spacing:0.5px; margin-bottom:0.2rem;">Ingram Micro</div>
-                    <div style="font-size:0.72rem; color:#666; font-weight:600;">Distributeur IT</div>
-                    <div style="font-size:0.68rem; color:#999; margin-top:0.2rem;">Distribution & approvisionnement</div>
-                </div>
-
-                <!-- Ekahau -->
-                <div style="background:#fff; border:1px solid #e0e0e0; border-radius:12px; padding:1.5rem 1.25rem; text-align:center;">
-                    <div style="font-size:1.5rem; margin-bottom:0.5rem;">📡</div>
-                    <div style="font-size:1.05rem; font-weight:800; color:#f57c00; letter-spacing:0.5px; margin-bottom:0.2rem;">Ekahau</div>
-                    <div style="font-size:0.72rem; color:#666; font-weight:600;">WiFi Design & Survey</div>
-                    <div style="font-size:0.68rem; color:#999; margin-top:0.2rem;">Site Survey · Heatmaps RF</div>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
 
     <!-- Call to Action -->
     <section class="cta-minimal">
