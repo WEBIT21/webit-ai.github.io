@@ -137,43 +137,75 @@ if (scrollIndicator) {
 
 const contactForm = document.querySelector('.form-contact');
 if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
+    const statusEl = document.getElementById('contactFormStatus');
+    const submitBtn = document.getElementById('contactSubmitBtn');
+
+    function showStatus(message, isError) {
+        if (!statusEl) return;
+        statusEl.textContent = message;
+        statusEl.style.display = 'block';
+        statusEl.style.background = isError ? '#fef2f2' : '#f0fdf4';
+        statusEl.style.color = isError ? '#b91c1c' : '#15803d';
+        statusEl.style.border = `1px solid ${isError ? '#fecaca' : '#bbf7d0'}`;
+    }
+
+    contactForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+
         const inputs = contactForm.querySelectorAll('input[required], select[required], textarea[required]');
         let isValid = true;
-        
+
         inputs.forEach(input => {
             if (!input.value.trim()) {
                 isValid = false;
                 input.style.borderColor = '#ef4444';
-                
-                // Retirer la bordure rouge après 3 secondes
-                setTimeout(() => {
-                    input.style.borderColor = '#d1d5db';
-                }, 3000);
+                setTimeout(() => { input.style.borderColor = '#d1d5db'; }, 3000);
             } else {
                 input.style.borderColor = '#d1d5db';
             }
         });
-        
-        // Validation email
+
         const emailInput = contactForm.querySelector('input[type="email"]');
         if (emailInput && emailInput.value) {
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailRegex.test(emailInput.value)) {
                 isValid = false;
                 emailInput.style.borderColor = '#ef4444';
-                alert('Veuillez entrer une adresse email valide.');
-                e.preventDefault();
-                return;
             }
         }
-        
+
         if (!isValid) {
-            e.preventDefault();
-            alert('Veuillez remplir tous les champs obligatoires.');
+            showStatus('Veuillez remplir correctement tous les champs obligatoires.', true);
+            return;
+        }
+
+        const payload = Object.fromEntries(new FormData(contactForm).entries());
+
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Envoi en cours...';
+
+        try {
+            const res = await fetch('/api/contact', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            });
+            const data = await res.json();
+
+            if (data.success) {
+                showStatus('✅ Message envoyé ! Nous vous répondrons sous 24h ouvrées.', false);
+                contactForm.reset();
+            } else {
+                throw new Error(data.error || 'Échec de l\'envoi');
+            }
+        } catch (err) {
+            showStatus('❌ Une erreur est survenue. Contactez-nous directement à contact@webit-ai.com ou au +33 6 15 19 76 25.', true);
+        } finally {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Envoyer le message';
         }
     });
-    
+
     // Retirer la bordure rouge quand l'utilisateur tape
     contactForm.querySelectorAll('input, select, textarea').forEach(input => {
         input.addEventListener('input', function() {

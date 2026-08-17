@@ -108,7 +108,7 @@
                 <div class="contact-form-page">
                     <h3>Envoyez-nous un message</h3>
                     
-                    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="form-contact">
+                    <form id="contactForm" class="form-contact">
                         
                         <div class="form-row-page">
                             <div class="form-group-page">
@@ -185,10 +185,12 @@
                         </div>
 
                         <div class="form-group-page">
-                            <button type="submit" class="btn btn-primary btn-large">
+                            <button type="submit" class="btn btn-primary btn-large" id="contactSubmitBtn">
                                 Envoyer le message
                             </button>
                         </div>
+
+                        <p id="contactFormStatus" style="display:none; margin-top:1rem; padding:0.9rem 1.1rem; border-radius:8px; font-size:0.95rem;"></p>
 
                         <p class="form-note-page">
                             * Champs obligatoires<br>
@@ -257,6 +259,10 @@
                     <p>Expert Infrastructure IT<br>
                     <small>France • Gabon</small></p>
                 </div>
+                <div class="footer-contact">
+                    <a href="tel:+33615197625">📱 +33 6 15 19 76 25</a>
+                    <a href="mailto:contact@webit-ai.com">📧 contact@webit-ai.com</a>
+                </div>
                 <div class="footer-links">
                     <a href="index.html">Accueil</a>
                     <a href="services.html">Services</a>
@@ -265,7 +271,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Webit AI. Tous droits réservés.</p>
+                <p>&copy; 2026 Webit AI. Tous droits réservés.</p>
             </div>
         </div>
     </footer>

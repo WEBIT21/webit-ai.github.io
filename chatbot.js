@@ -1,19 +1,13 @@
 /**
  * Webit AI Chatbot v3 Pro
  * ─────────────────────────────────────────────────────────────
- * CONFIGURATION REQUISE (2 étapes) :
- *
- * 1. Déployer worker.js sur Cloudflare Workers (gratuit)
- *    → Remplacer workerUrl ci-dessous par l'URL de ton Worker
- *
- * 2. Créer un compte gratuit sur https://web3forms.com
- *    → Entrer contact@webit-ai.com → Copier la clé reçue par email
- *    → Remplacer web3formsKey ci-dessous
+ * Backend : agent IA + relais mail, self-hosté (srv-api), exposé
+ * en même origine via /api/chat et /api/lead (proxifiés par
+ * SRV-RPROXY sous webit-ai.com). Pas de clé tierce nécessaire.
  * ─────────────────────────────────────────────────────────────
  */
 const CHATBOT_CONFIG = {
-  workerUrl:    'VOTRE_WORKER_URL',     // ex: https://webit-chatbot.monpseudo.workers.dev
-  web3formsKey: 'VOTRE_WEB3FORMS_KEY', // ex: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+  workerUrl: '', // même origine (webit-ai.com) -> /api/chat, /api/lead
   colors: {
     primary:   '#3A75C4',
     secondary: '#009E60',
@@ -21,8 +15,7 @@ const CHATBOT_CONFIG = {
   }
 };
 
-const AI_ON    = CHATBOT_CONFIG.workerUrl    && !CHATBOT_CONFIG.workerUrl.startsWith('VOTRE');
-const FORMS_ON = CHATBOT_CONFIG.web3formsKey && !CHATBOT_CONFIG.web3formsKey.startsWith('VOTRE');
+const AI_ON = true;
 
 const LEAD_REGEX = /\b(devis|tarif|prix|coût|cout|budget|rappel|contacter|offre|propositi|interest|renseignement|contact|demande|infos?)\b/i;
 
@@ -654,32 +647,33 @@ class WebitChatbot {
     btn.textContent = 'Envoi en cours...';
 
     const payload = {
-      access_key:    CHATBOT_CONFIG.web3formsKey,
       subject:       `🔔 Nouveau devis Webit AI – ${zone} – ${name}`,
-      from_name:     'Chatbot Webit AI',
-      replyto:       email,
       name,
       email,
       telephone:     form.phone.value.trim() || 'Non renseigné',
       localisation:  zone,
       service:       form.service.value || 'Non précisé',
       projet:        form.project.value.trim() || 'Non précisé',
-      zone_detectee: this.zone ? `${this.zone} (géolocalisation IP)` : 'Non détectée',
-      botcheck:      false
+      zone_detectee: this.zone ? `${this.zone} (géolocalisation IP)` : 'Non détectée'
     };
 
     try {
       let success = false;
 
-      if (FORMS_ON) {
-        const res  = await fetch('https://api.web3forms.com/submit', {
+      try {
+        const res  = await fetch('/api/lead', {
           method:  'POST',
           headers: { 'Content-Type': 'application/json' },
-          body:    JSON.stringify(payload)
+          body:    JSON.stringify(payload),
+          signal:  AbortSignal.timeout(10000)
         });
         const data = await res.json();
-        success    = data.success;
-      } else {
+        success    = !!data.success;
+      } catch {
+        success = false;
+      }
+
+      if (!success) {
         // Fallback : ouvrir le client mail avec les infos pré-remplies
         const body = encodeURIComponent(
           `Nom: ${name}\nEmail: ${email}\nTéléphone: ${payload.telephone}\nLocalisation: ${zone}\nService: ${payload.service}\nProjet: ${payload.projet}`

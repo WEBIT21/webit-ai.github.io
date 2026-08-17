@@ -1469,6 +1469,26 @@ body {
     color: white;
 }
 
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-contact a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #9ca3af;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-contact a:hover {
+    color: white;
+}
+
 .footer-bottom {
     text-align: center;
     font-size: 14px;
