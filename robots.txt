@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://webit-ai.com/sitemap.xml
