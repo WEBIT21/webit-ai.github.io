@@ -169,6 +169,15 @@ body {
     z-index: 0;
 }
 
+/* Sur mobile, le cadre est très haut/étroit : "cover" ne garde qu'une bande
+   verticale centrale de la vidéo (format large 16:9), qui tombe sur une zone
+   creuse du clip. On recadre vers un amas de nœuds plus dense et plus lumineux. */
+@media (max-width: 640px) {
+    .hero-video {
+        object-position: 82% 45%;
+    }
+}
+
 /* La vidéo source (réseau de nœuds) est en N&B — ce calque la teinte en bleu WEBIT */
 .hero-tint {
     position: absolute;
