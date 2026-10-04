@@ -492,6 +492,12 @@ class WebitChatbot {
       .replace(/([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/g, '<a href="mailto:$1">$1</a>');
   }
 
+  // Échappement strict (pas de markdown/liens) — pour réinjecter une saisie utilisateur brute (nom, email...)
+  esc(text) {
+    return String(text)
+      .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
   renderMsgs() {
     this.el.msgs.innerHTML = this.messages.map(m => `
       <div class="wb-msg ${m.role}">
@@ -687,10 +693,10 @@ class WebitChatbot {
         document.getElementById('wb-lead-wrap').innerHTML = `
           <div class="wb-success-card">
             <div class="wb-success-icon">✅</div>
-            <div class="wb-success-title">Demande envoy��e !</div>
+            <div class="wb-success-title">Demande envoyée !</div>
             <div class="wb-success-text">
-              Merci <strong>${name.split(' ')[0]}</strong>, nous vous répondrons sous 24h<br>
-              à <strong>${email}</strong>.
+              Merci <strong>${this.esc(name.split(' ')[0])}</strong>, nous vous répondrons sous 24h<br>
+              à <strong>${this.esc(email)}</strong>.
             </div>
           </div>
         `;

@@ -37,13 +37,9 @@
         "logo": "https://webit-ai.com/favicon.png",
         "description": "Webit AI - Expert en Infrastructure IT, Systèmes, Réseaux, Sécurité et Vidéosurveillance",
         "email": "contact@webit-ai.com",
-        "telephone": "+33615197625",
         "areaServed": ["France", "Gabon"],
         "address": {
             "@type": "PostalAddress",
-            "addressLocality": "Sainte-Geneviève",
-            "postalCode": "60730",
-            "addressRegion": "Hauts-de-France",
             "addressCountry": "FR"
         },
         "sameAs": [
@@ -86,308 +82,296 @@
 
     <!-- Introduction -->
     <section class="intro-section">
-        <div class="container">
-            <div class="intro-content">
+        <div class="intro-banner" style="background-image: url('assets/images/intro-rack-banner.jpg');" role="img" aria-label="Baie serveur WEBIT en datacenter">
+            <div class="intro-banner-text">
+                <p class="intro-eyebrow">Infrastructure · Cybersécurité · Datacenter</p>
                 <h2>Un partenaire sans limite pour votre entreprise</h2>
+                <span class="intro-accent-bar"></span>
                 <p>
-                    Webit AI et son réseau de spécialistes vous accompagnent au quotidien dans la gestion de votre infrastructure 
-                    informatique et télécom. De la création à l'évolution, par une intervention ponctuelle ou régulière, sur vos 
-                    sites ou en datacenter, en France ou à l'étranger, nos équipes sont à vos côtés pour vous aider à apporter 
-                    le niveau nécessaire au bon fonctionnement de votre système d'information.
-                </p>
-                <p>
-                    Assistance à maîtrise d'ouvrage, rédaction de cahiers des charges techniques, régie de ressources techniques, 
-                    audits d'infrastructures, fabrication de salles blanches et locaux techniques, création ou évolution de votre 
-                    câblage, services de supervision, sécurisation des postes serveurs et données, contrôle d'accès et caméras IP, 
-                    vidéoconférences d'images, domotique, infogérance, supports pour vos VIP, sauvegardes sur site ou externalisées, 
-                    services SaaS et hébergements, etc.
+                    WEBIT et son réseau de spécialistes vous accompagnent au quotidien dans la gestion de votre
+                    infrastructure informatique. De la conception à l'exploitation, par une intervention ponctuelle
+                    ou régulière, sur vos sites ou en datacenter, en France comme au Gabon, nos équipes vous aident
+                    à maintenir le bon fonctionnement de votre système d'information.
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- Bande colorée -->
-    <section class="banner-section">
-        <div class="banner-content">
-            <h2>Une offre de services développée autour de 7 métiers complémentaires</h2>
+    <!-- Galaxie des services -->
+    <section class="services-galaxy">
+        <div class="container">
+            <div class="section-header-center">
+                <h2>Explorez nos domaines d'expertise</h2>
+                <p>Cliquez sur un point pour en savoir plus</p>
+            </div>
         </div>
-        <div class="banner-arrow"></div>
+        <div class="galaxy-stage">
+            <div class="galaxy-stars" id="galaxyStars"></div>
+            <svg class="galaxy-lines" viewBox="0 0 600 600" preserveAspectRatio="xMidYMid meet">
+                <line class="galaxy-line" x1="300" y1="300" x2="300" y2="80"/>
+                <line class="galaxy-line" x1="300" y1="300" x2="472" y2="163"/>
+                <line class="galaxy-line" x1="300" y1="300" x2="515" y2="349"/>
+                <line class="galaxy-line" x1="300" y1="300" x2="395" y2="498"/>
+                <line class="galaxy-line" x1="300" y1="300" x2="205" y2="498"/>
+                <line class="galaxy-line" x1="300" y1="300" x2="85" y2="349"/>
+                <line class="galaxy-line" x1="300" y1="300" x2="128" y2="163"/>
+            </svg>
+            <a href="index.html" class="galaxy-hub" aria-label="Retour à l'accueil WEBIT"><span>WEBIT</span></a>
+
+            <a href="#systeme" class="galaxy-orb" data-target="systeme" style="top:13.3%; left:50%; --delay:0s;">
+                <span class="galaxy-orb-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="6" rx="1.5"/><rect x="3" y="14" width="18" height="6" rx="1.5"/><circle cx="7" cy="7" r="0.8" fill="currentColor" stroke="none"/><circle cx="7" cy="17" r="0.8" fill="currentColor" stroke="none"/></svg></span>
+                <span class="galaxy-orb-label">Administration Système</span>
+            </a>
+
+            <a href="#reseau" class="galaxy-orb" data-target="reseau" style="top:27.2%; left:78.7%; --delay:0.6s;">
+                <span class="galaxy-orb-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="4.5" r="2"/><circle cx="5" cy="18" r="2"/><circle cx="19" cy="18" r="2"/><path d="M12 6.5v4M12 10.5 6 16M12 10.5l6 5.5"/></svg></span>
+                <span class="galaxy-orb-label">Infrastructure Réseau</span>
+            </a>
+
+            <a href="#securite" class="galaxy-orb featured" data-target="securite" style="top:58.2%; left:85.8%; --delay:1.2s;">
+                <span class="galaxy-orb-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></span>
+                <span class="galaxy-orb-label">Sécurité Informatique</span>
+            </a>
+
+            <a href="#wifi" class="galaxy-orb" data-target="wifi" style="top:83%; left:65.8%; --delay:1.8s;">
+                <span class="galaxy-orb-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5a15 15 0 0 1 18 0"/><path d="M6.3 12.2a10.5 10.5 0 0 1 11.4 0"/><path d="M9.6 15.9a6 6 0 0 1 4.8 0"/><circle cx="12" cy="19" r="1" fill="currentColor" stroke="none"/></svg></span>
+                <span class="galaxy-orb-label">WiFi Professionnel</span>
+            </a>
+
+            <a href="#video" class="galaxy-orb" data-target="video" style="top:83%; left:34.2%; --delay:2.4s;">
+                <span class="galaxy-orb-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="9" width="10" height="6" rx="3"/><circle cx="14.5" cy="12" r="4"/><circle cx="14.5" cy="12" r="1.8"/><circle cx="13.5" cy="11" r="0.5" fill="currentColor" stroke="none"/><path d="M6 15v2.3"/><path d="M4 17.3h4"/></svg></span>
+                <span class="galaxy-orb-label">Vidéosurveillance IP</span>
+            </a>
+
+            <a href="#cloud" class="galaxy-orb" data-target="cloud" style="top:58.2%; left:14.2%; --delay:3s;">
+                <span class="galaxy-orb-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18h10a4 4 0 0 0 .5-7.97A5.5 5.5 0 0 0 7.1 8.1 4.5 4.5 0 0 0 7 18z"/></svg></span>
+                <span class="galaxy-orb-label">Cloud & Automatisation</span>
+            </a>
+
+            <a href="#starlink" class="galaxy-orb featured" data-target="starlink" style="top:27.2%; left:21.3%; --delay:3.6s;">
+                <span class="galaxy-orb-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="9.5" y="9.5" width="5" height="5" rx="1" transform="rotate(45 12 12)"/><path d="M4 4l3 3M20 4l-3 3M4 20l3-3M20 20l-3-3"/><path d="M12 2v3M12 19v3"/></svg></span>
+                <span class="galaxy-orb-label">Starlink Business</span>
+            </a>
+        </div>
     </section>
 
-    <!-- Services Détaillés -->
+    <!-- Modale de détail (alimentée en JS depuis .services-detailed) -->
+    <div class="galaxy-modal-overlay" id="galaxyModalOverlay">
+        <div class="galaxy-modal" id="galaxyModal" role="dialog" aria-modal="true">
+            <button type="button" class="galaxy-modal-close" id="galaxyModalClose" aria-label="Fermer">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </button>
+            <div class="galaxy-modal-content" id="galaxyModalContent"></div>
+        </div>
+    </div>
+
+    <!-- Services Détaillés (source de contenu pour la galaxie, masquée visuellement) -->
     <section class="services-detailed">
         <div class="container-large">
-            
+
             <!-- Service 1 : Administration Système -->
-            <div class="service-detail" id="systeme">
-                <div class="service-detail-icon">
-                    <div class="icon-circle">💻</div>
+            <details class="service-detail" id="systeme">
+                <summary>
+                    <div class="service-detail-icon">
+                        <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="6" rx="1.5"/><rect x="3" y="14" width="18" height="6" rx="1.5"/><circle cx="7" cy="7" r="0.8" fill="currentColor" stroke="none"/><circle cx="7" cy="17" r="0.8" fill="currentColor" stroke="none"/></svg></div>
+                    </div>
+                    <div class="service-detail-summary-text">
+                        <h2>Administration Système</h2>
+                        <p>Windows, Linux, virtualisation et supervision de vos serveurs au quotidien.</p>
+                    </div>
+                    <svg class="service-detail-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                </summary>
+                <div class="service-detail-body">
+                    <div class="service-tags">
+                        <span class="service-tag">Windows Server 2012-2022</span>
+                        <span class="service-tag">Linux : RedHat, Ubuntu, CentOS, Debian</span>
+                        <span class="service-tag">VMware, Hyper-V, Proxmox VE</span>
+                        <span class="service-tag">SQL Server, PostgreSQL, MySQL</span>
+                        <span class="service-tag">IIS, Apache, Nginx</span>
+                        <span class="service-tag">Grafana, Centreon, Nagios, Zabbix</span>
+                        <span class="service-tag">Veeam, Rubrik</span>
+                    </div>
                 </div>
-                <div class="service-detail-content">
-                    <h2>Administration Système</h2>
-                    <p class="service-intro">
-                        Gestion complète de vos serveurs Windows et Linux. Administration Active Directory, virtualisation 
-                        VMware/Hyper-V, gestion des serveurs de messagerie et applications métier.
-                    </p>
-                    <h3>Conseil en :</h3>
-                    <ul>
-                        <li>Organisation des systèmes d'information</li>
-                        <li>Exploitation et méthodes d'exploitation</li>
-                        <li>Gestion de la sécurité physique et logique</li>
-                        <li>Conduite du changement</li>
-                    </ul>
-                    <h3>Nos prestations :</h3>
-                    <ul>
-                        <li><strong>Windows Server 2012-2022</strong> : Active Directory, GPO, DNS/DHCP, PKI, RDS</li>
-                        <li><strong>Linux</strong> : RedHat Enterprise, Ubuntu Server, CentOS, Debian</li>
-                        <li><strong>Virtualisation</strong> : VMware vSphere, Hyper-V, Proxmox VE</li>
-                        <li><strong>Bases de données</strong> : SQL Server, PostgreSQL, MySQL/MariaDB</li>
-                        <li><strong>Serveurs web</strong> : IIS, Apache, Nginx</li>
-                        <li><strong>Monitoring proactif</strong> : Grafana, Centreon, Nagios, Zabbix</li>
-                        <li><strong>Sauvegardes automatisées</strong> : Veeam Backup & Replication, Rubrik</li>
-                    </ul>
-                    <p class="service-footer">
-                        Assistance à maîtrise d'oeuvre et d'ouvrage. Gestion de projets. Étude technique détaillée et rédaction 
-                        du cahier des charges.
-                    </p>
-                </div>
-            </div>
+            </details>
 
             <!-- Service 2 : Infrastructure Réseau -->
-            <div class="service-detail" id="reseau">
-                <div class="service-detail-icon">
-                    <div class="icon-circle">🌐</div>
+            <details class="service-detail" id="reseau">
+                <summary>
+                    <div class="service-detail-icon">
+                        <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="4.5" r="2"/><circle cx="5" cy="18" r="2"/><circle cx="19" cy="18" r="2"/><path d="M12 6.5v4M12 10.5 6 16M12 10.5l6 5.5"/></svg></div>
+                    </div>
+                    <div class="service-detail-summary-text">
+                        <h2>Infrastructure Réseau</h2>
+                        <p>Architecture LAN/WAN, VPN et équipements Cisco, Aruba et HP/HPE.</p>
+                    </div>
+                    <svg class="service-detail-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                </summary>
+                <div class="service-detail-body">
+                    <div class="service-tags">
+                        <span class="service-tag">LAN/WAN & VLAN</span>
+                        <span class="service-tag">Cisco Catalyst, Nexus</span>
+                        <span class="service-tag">Aruba CX, Instant On</span>
+                        <span class="service-tag">HP/HPE ProCurve</span>
+                        <span class="service-tag">OSPF, BGP, EIGRP</span>
+                        <span class="service-tag">VPN IPSec / SSL</span>
+                        <span class="service-tag">F5 BIG-IP</span>
+                        <span class="service-tag">QoS</span>
+                        <span class="service-tag">MPLS</span>
+                    </div>
                 </div>
-                <div class="service-detail-content">
-                    <h2>Infrastructure Réseau</h2>
-                    <p class="service-intro">
-                        Conception et déploiement d'architectures réseau performantes et sécurisées. Switchs, routeurs, 
-                        VLAN, VPN, MPLS. Configuration et optimisation de votre infrastructure réseau.
-                    </p>
-                    <h3>Nos expertises :</h3>
-                    <ul>
-                        <li><strong>Architecture LAN/WAN</strong> : Conception, segmentation VLAN par département</li>
-                        <li><strong>Équipements Cisco</strong> : Catalyst, Nexus, Routeurs ISR</li>
-                        <li><strong>Équipements Aruba</strong> : CX Series, Instant On</li>
-                        <li><strong>Équipements HP/HPE</strong> : ProCurve, FlexNetwork</li>
-                        <li><strong>Routage dynamique</strong> : OSPF, BGP, EIGRP</li>
-                        <li><strong>VPN site-to-site</strong> : IPSec, GRE, DMVPN</li>
-                        <li><strong>VPN accès distant</strong> : SSL VPN, Remote Access</li>
-                        <li><strong>F5 BIG-IP</strong> : Load Balancing, haute disponibilité</li>
-                        <li><strong>QoS</strong> : Priorisation trafic voix et vidéo</li>
-                        <li><strong>MPLS</strong> : Interconnexion sites multi-opérateurs</li>
-                    </ul>
-                    <h3>Déploiement des technologies :</h3>
-                    <ul>
-                        <li>Création et évolution d'infrastructures</li>
-                        <li>Migration vers nouvelles technologies</li>
-                        <li>Test de stabilité des solutions</li>
-                        <li>Mise en place de documentations et procédures</li>
-                        <li>Formation des utilisateurs et équipes techniques</li>
-                    </ul>
-                </div>
-            </div>
+            </details>
 
             <!-- Service 3 : Sécurité (Featured) -->
-            <div class="service-detail featured-service" id="securite">
+            <details class="service-detail featured-service" id="securite">
                 <span class="service-badge">Expertise certifiée</span>
-                <div class="service-detail-icon">
-                    <div class="icon-circle featured">🛡️</div>
+                <summary>
+                    <div class="service-detail-icon">
+                        <div class="icon-circle featured"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></div>
+                    </div>
+                    <div class="service-detail-summary-text">
+                        <h2>Sécurité Informatique</h2>
+                        <p>Firewall nouvelle génération, EDR, SIEM et conformité RGPD/ISO 27001.</p>
+                    </div>
+                    <svg class="service-detail-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                </summary>
+                <div class="service-detail-body">
+                    <h3>Solutions</h3>
+                    <div class="service-tags">
+                        <span class="service-tag">FortiGate, Palo Alto Networks</span>
+                        <span class="service-tag">EDR/XDR : SentinelOne, Wazuh, Cortex</span>
+                        <span class="service-tag">SIEM : Splunk, Wazuh, QRadar</span>
+                        <span class="service-tag">Nessus, Qualys</span>
+                        <span class="service-tag">WAF : F5, Cloudflare</span>
+                        <span class="service-tag">Email Security : Proofpoint, Mimecast</span>
+                        <span class="service-tag">DLP</span>
+                        <span class="service-tag">NAC 802.1X</span>
+                    </div>
+                    <h3>Audits & conformité</h3>
+                    <div class="service-tags">
+                        <span class="service-tag">Audit & cartographie SI</span>
+                        <span class="service-tag">Tests d'intrusion (Pentest)</span>
+                        <span class="service-tag">RGPD</span>
+                        <span class="service-tag">ISO 27001</span>
+                        <span class="service-tag">PCI-DSS</span>
+                        <span class="service-tag">Formation & phishing simulé</span>
+                    </div>
                 </div>
-                <div class="service-detail-content">
-                    <h2>Sécurité Informatique</h2>
-                    <p class="service-intro">
-                        Protection complète de votre infrastructure : pare-feu nouvelle génération, détection d'intrusion, 
-                        antivirus centralisé, audits de sécurité. Conformité RGPD et ISO27001.
-                    </p>
-                    <h3>Solutions de sécurité :</h3>
-                    <ul>
-                        <li><strong>Firewall Next-Gen</strong> : Fortinet FortiGate, Palo Alto Networks</li>
-                        <li><strong>EDR/XDR</strong> : SentinelOne, Wazuh, Cortex XDR</li>
-                        <li><strong>SIEM</strong> : Splunk, Wazuh, QRadar</li>
-                        <li><strong>Vulnerability Management</strong> : Nessus Professional, Qualys</li>
-                        <li><strong>WAF</strong> : F5 Advanced WAF, Cloudflare</li>
-                        <li><strong>Email Security</strong> : Proofpoint, Mimecast</li>
-                        <li><strong>DLP</strong> : Data Loss Prevention</li>
-                        <li><strong>NAC</strong> : Network Access Control 802.1X</li>
-                    </ul>
-                    <h3>Audits et conformité :</h3>
-                    <ul>
-                        <li>Audit de sécurité complet et cartographie SI</li>
-                        <li>Analyse de risques et recommandations</li>
-                        <li>Tests d'intrusion (Pentest)</li>
-                        <li>Conformité RGPD (Règlement Général sur la Protection des Données)</li>
-                        <li>Conformité ISO27001 (Sécurité de l'information)</li>
-                        <li>Conformité PCI-DSS (industrie des cartes de paiement)</li>
-                        <li>Formation utilisateurs à la cybersécurité</li>
-                        <li>Exercices de phishing simulés</li>
-                    </ul>
-                </div>
-            </div>
+            </details>
 
             <!-- Service 4 : WiFi -->
-            <div class="service-detail" id="wifi">
-                <div class="service-detail-icon">
-                    <div class="icon-circle">📡</div>
-                </div>
-                <div class="service-detail-content">
-                    <h2>WiFi Professionnel</h2>
-                    <p class="service-intro">
-                        Déploiement de réseaux WiFi haute performance pour entreprises, campus et sites industriels. 
-                        Site survey, conception, installation et gestion centralisée.
+            <details class="service-detail" id="wifi">
+                <summary>
+                    <div class="service-detail-icon">
+                        <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5a15 15 0 0 1 18 0"/><path d="M6.3 12.2a10.5 10.5 0 0 1 11.4 0"/><path d="M9.6 15.9a6 6 0 0 1 4.8 0"/><circle cx="12" cy="19" r="1" fill="currentColor" stroke="none"/></svg></div>
+                    </div>
+                    <div class="service-detail-summary-text">
+                        <h2>WiFi Professionnel</h2>
+                        <p>Site survey Ekahau, déploiement Aruba/Meraki/Ruckus et portail captif.</p>
+                    </div>
+                    <svg class="service-detail-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                </summary>
+                <div class="service-detail-body">
+                    <div class="service-tags">
+                        <span class="service-tag">Site Survey Ekahau</span>
+                        <span class="service-tag">Aruba Instant, Campus AP</span>
+                        <span class="service-tag">Cisco Meraki</span>
+                        <span class="service-tag">Ruckus / CommScope</span>
+                        <span class="service-tag">WPA3 & 802.1X</span>
+                        <span class="service-tag">Portail captif</span>
+                        <span class="service-tag">Fast Roaming 802.11r/k/v</span>
+                    </div>
+                    <p class="service-footer">
+                        Campus, sites industriels, hôtels, hôpitaux, bureaux multi-étages, retail.
                     </p>
-                    <h3>Nos prestations WiFi :</h3>
-                    <ul>
-                        <li><strong>Site Survey Ekahau</strong> : Analyse RF complète, heatmaps, planification capacité</li>
-                        <li><strong>Points d'accès Aruba</strong> : Instant, Campus AP, Remote AP</li>
-                        <li><strong>Cisco Meraki</strong> : Gestion cloud, analytics utilisateurs</li>
-                        <li><strong>Ruckus/CommScope</strong> : Indoor & Outdoor AP</li>
-                        <li><strong>Contrôleurs WiFi</strong> : Aruba Mobility Controller, Cisco WLC</li>
-                        <li><strong>Gestion cloud</strong> : Aruba Central, Cisco Meraki Dashboard</li>
-                        <li><strong>Sécurité WPA3</strong> : Authentification 802.1X avec RADIUS</li>
-                        <li><strong>WiFi invités</strong> : Portail captif personnalisé, réseaux séparés</li>
-                        <li><strong>Roaming transparent</strong> : Fast Roaming 802.11r/k/v</li>
-                        <li><strong>Optimisation RF</strong> : Channel planning, power adjustment</li>
-                        <li><strong>Troubleshooting</strong> : Packet capture, spectrum analysis</li>
-                    </ul>
-                    <h3>Cas d'usage :</h3>
-                    <ul>
-                        <li>Campus universitaires et écoles</li>
-                        <li>Sites industriels et entrepôts</li>
-                        <li>Hôtels et centres de congrès</li>
-                        <li>Hôpitaux et cliniques</li>
-                        <li>Bureaux multi-étages</li>
-                        <li>Retail et centres commerciaux</li>
-                    </ul>
                 </div>
-            </div>
+            </details>
 
             <!-- Service 5 : Vidéosurveillance -->
-            <div class="service-detail" id="video">
-                <div class="service-detail-icon">
-                    <div class="icon-circle">📹</div>
-                </div>
-                <div class="service-detail-content">
-                    <h2>Vidéosurveillance IP</h2>
-                    <p class="service-intro">
-                        Installation de systèmes de vidéosurveillance professionnels. Caméras IP haute résolution, 
-                        enregistreurs NVR, analyse vidéo intelligente et supervision centralisée.
+            <details class="service-detail" id="video">
+                <summary>
+                    <div class="service-detail-icon">
+                        <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="9" width="10" height="6" rx="3"/><circle cx="14.5" cy="12" r="4"/><circle cx="14.5" cy="12" r="1.8"/><circle cx="13.5" cy="11" r="0.5" fill="currentColor" stroke="none"/><path d="M6 15v2.3"/><path d="M4 17.3h4"/></svg></div>
+                    </div>
+                    <div class="service-detail-summary-text">
+                        <h2>Vidéosurveillance IP</h2>
+                        <p>Caméras 4K/8MP, NVR haute capacité et analyse vidéo intelligente.</p>
+                    </div>
+                    <svg class="service-detail-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                </summary>
+                <div class="service-detail-body">
+                    <div class="service-tags">
+                        <span class="service-tag">Hikvision, Dahua, Axis</span>
+                        <span class="service-tag">Caméras PTZ & thermiques</span>
+                        <span class="service-tag">NVR haute capacité</span>
+                        <span class="service-tag">VMS : Milestone, Genetec</span>
+                        <span class="service-tag">Analyse IA, ANPR/LPR</span>
+                        <span class="service-tag">Intégration contrôle d'accès</span>
+                        <span class="service-tag">RGPD</span>
+                    </div>
+                    <p class="service-footer">
+                        Étude de site, câblage PoE, configuration et maintenance préventive incluses.
                     </p>
-                    <h3>Solutions de vidéosurveillance :</h3>
-                    <ul>
-                        <li><strong>Caméras IP 4K/8MP</strong> : Hikvision, Dahua, Axis Communications</li>
-                        <li><strong>Caméras PTZ</strong> : Pan/Tilt/Zoom motorisées, suivi automatique</li>
-                        <li><strong>Caméras thermiques</strong> : Détection périmétrique avancée</li>
-                        <li><strong>NVR haute capacité</strong> : Stockage 30/60/90 jours configurables</li>
-                        <li><strong>VMS professionnel</strong> : Milestone XProtect, Genetec Security Center</li>
-                        <li><strong>Analyse vidéo IA</strong> : Détection d'intrusion, reconnaissance faciale</li>
-                        <li><strong>ANPR/LPR</strong> : Lecture automatique de plaques d'immatriculation</li>
-                        <li><strong>People counting</strong> : Comptage de personnes, heatmaps</li>
-                        <li><strong>Accès distant</strong> : Application mobile iOS/Android, accès web sécurisé</li>
-                        <li><strong>Intégration contrôle d'accès</strong> : Liaison avec badges et lecteurs</li>
-                        <li><strong>Conformité RGPD</strong> : Anonymisation, gestion droits d'accès, rétention</li>
-                    </ul>
-                    <h3>Mise en place :</h3>
-                    <ul>
-                        <li>Étude de site et besoins de couverture</li>
-                        <li>Conception du système (caméras, switches PoE, stockage)</li>
-                        <li>Installation et câblage</li>
-                        <li>Configuration et tests</li>
-                        <li>Formation utilisateurs</li>
-                        <li>Maintenance préventive</li>
-                    </ul>
                 </div>
-            </div>
+            </details>
 
             <!-- Service 6 : Cloud -->
-            <div class="service-detail" id="cloud">
-                <div class="service-detail-icon">
-                    <div class="icon-circle">☁️</div>
+            <details class="service-detail" id="cloud">
+                <summary>
+                    <div class="service-detail-icon">
+                        <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18h10a4 4 0 0 0 .5-7.97A5.5 5.5 0 0 0 7.1 8.1 4.5 4.5 0 0 0 7 18z"/></svg></div>
+                    </div>
+                    <div class="service-detail-summary-text">
+                        <h2>Cloud & Automatisation</h2>
+                        <p>Migration Azure/AWS/GCP, Ansible/Terraform et CI/CD.</p>
+                    </div>
+                    <svg class="service-detail-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                </summary>
+                <div class="service-detail-body">
+                    <div class="service-tags">
+                        <span class="service-tag">Azure, AWS, Google Cloud</span>
+                        <span class="service-tag">Architecture hybride</span>
+                        <span class="service-tag">Ansible / AWX</span>
+                        <span class="service-tag">Terraform (IaC)</span>
+                        <span class="service-tag">CI/CD</span>
+                        <span class="service-tag">Docker, Kubernetes</span>
+                    </div>
                 </div>
-                <div class="service-detail-content">
-                    <h2>Cloud & Automatisation</h2>
-                    <p class="service-intro">
-                        Migration et gestion d'infrastructures cloud (Azure, AWS). Automatisation avec Ansible et Terraform. 
-                        DevOps et optimisation des coûts cloud.
-                    </p>
-                    <h3>Cloud Public :</h3>
-                    <ul>
-                        <li><strong>Microsoft Azure</strong> : Virtual Machines, Storage, Virtual Networks, Entra ID</li>
-                        <li><strong>AWS</strong> : EC2, S3, VPC, RDS, Lambda, CloudFront</li>
-                        <li><strong>Google Cloud</strong> : Compute Engine, Cloud Storage, GKE</li>
-                        <li><strong>Architecture hybride</strong> : On-premise + Cloud</li>
-                        <li><strong>Migration cloud</strong> : Assessment, planning, execution sans interruption</li>
-                    </ul>
-                    <h3>Automatisation & DevOps :</h3>
-                    <ul>
-                        <li><strong>Ansible/AWX</strong> : Playbooks, orchestration, gestion configuration</li>
-                        <li><strong>Terraform</strong> : Infrastructure as Code (IaC)</li>
-                        <li><strong>CI/CD</strong> : GitHub Actions, GitLab CI, Azure DevOps</li>
-                        <li><strong>Conteneurisation</strong> : Docker, Kubernetes, Helm</li>
-                        <li><strong>Git</strong> : Versioning, workflows, branch strategies</li>
-                        <li><strong>Scripting</strong> : PowerShell, Bash, Python</li>
-                    </ul>
-                    <h3>Avantages :</h3>
-                    <ul>
-                        <li>Réduction jusqu'à 70% du temps de déploiement</li>
-                        <li>Standardisation des configurations</li>
-                        <li>Reproductibilité des environnements</li>
-                        <li>Documentation automatique (Infrastructure as Code)</li>
-                        <li>Réduction des erreurs humaines</li>
-                        <li>Optimisation des coûts cloud</li>
-                    </ul>
-                </div>
-            </div>
+            </details>
 
-            <!-- ═══════════════════════════════════════════
-                 Service 7 : Intégration Starlink Business
-            ════════════════════════════════════════════ -->
-            <div class="service-detail featured-service" id="starlink">
+            <!-- Service 7 : Intégration Starlink Business -->
+            <details class="service-detail featured-service" id="starlink">
                 <span class="service-badge">Nouveau service</span>
-                <div class="service-detail-icon">
-                    <div class="icon-circle featured">🛰️</div>
-                </div>
-                <div class="service-detail-content">
-                    <h2>Intégration Starlink Business</h2>
-                    <p class="service-intro">
-                        Webit AI assure le déploiement terrain de vos équipements Starlink Business en France 
-                        et en Afrique Centrale. Nous intervenons après la livraison du terminal pour une 
-                        mise en service rapide et professionnelle.
-                    </p>
-
-                    <h3>Installation & mise en service :</h3>
-                    <ul>
-                        <li><strong>Étude de site préalable</strong> : Vérification couverture constellation, relevé topographique, rapport de faisabilité</li>
-                        <li><strong>Montage du terminal</strong> : Fixation toiture, mât ou pylône selon contraintes du site</li>
-                        <li><strong>Orientation & alignement</strong> : Positionnement précis pour signal optimal</li>
-                        <li><strong>Câblage structuré</strong> : Passage de câbles catégorie 6, cheminement propre et sécurisé</li>
-                        <li><strong>Protection électrique</strong> : Parafoudre et alimentation ondulée (UPS)</li>
-                        <li><strong>Tests & validation</strong> : Vérification des débits, latences et qualité du signal</li>
-                        <li><strong>Documentation</strong> : Remise d'un rapport d'installation et procédures d'utilisation</li>
-                    </ul>
-
-                    <h3>Zones d'intervention :</h3>
-                    <ul>
-                        <li><strong>France</strong> : Île-de-France (Paris, Oise, Val-d'Oise), zones blanches & rurales</li>
-                        <li><strong>Gabon — Libreville</strong> : Centre-ville, périphérie, administrations</li>
-                        <li><strong>Gabon — Sites isolés</strong> : Port-Gentil, Franceville, sites pétroliers offshore/onshore</li>
-                        <li><strong>Afrique Centrale</strong> : Interventions sur mission selon projet</li>
-                    </ul>
-
-                    <h3>Cas d'usage :</h3>
-                    <ul>
-                        <li>Chantiers & sites temporaires (BTP, pétroliers, forestiers, miniers)</li>
-                        <li>PME & bureaux délocalisés en zone sans fibre</li>
-                        <li>Lien de secours / backup pour haute disponibilité</li>
-                        <li>Hôpitaux de district, cliniques rurales, établissements scolaires</li>
-                        <li>Administrations, ministères, ambassades en zone blanche</li>
-                        <li>Industrie pétrolière & minière au Gabon</li>
-                    </ul>
-
+                <summary>
+                    <div class="service-detail-icon">
+                        <div class="icon-circle featured"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="9.5" y="9.5" width="5" height="5" rx="1" transform="rotate(45 12 12)"/><path d="M4 4l3 3M20 4l-3 3M4 20l3-3M20 20l-3-3"/><path d="M12 2v3M12 19v3"/></svg></div>
+                    </div>
+                    <div class="service-detail-summary-text">
+                        <h2>Intégration Starlink Business</h2>
+                        <p>Déploiement terrain en France et en Afrique Centrale, après livraison du terminal.</p>
+                    </div>
+                    <svg class="service-detail-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                </summary>
+                <div class="service-detail-body">
+                    <h3>Installation & mise en service</h3>
+                    <div class="service-tags">
+                        <span class="service-tag">Étude de site préalable</span>
+                        <span class="service-tag">Montage du terminal</span>
+                        <span class="service-tag">Orientation & alignement</span>
+                        <span class="service-tag">Câblage structuré</span>
+                        <span class="service-tag">Protection électrique (UPS)</span>
+                        <span class="service-tag">Tests & validation</span>
+                    </div>
+                    <h3>Zones d'intervention</h3>
+                    <div class="service-tags">
+                        <span class="service-tag">France : Île-de-France, Oise, Val-d'Oise</span>
+                        <span class="service-tag">Gabon : Libreville</span>
+                        <span class="service-tag">Gabon : Port-Gentil, Franceville, sites pétroliers</span>
+                        <span class="service-tag">Afrique Centrale sur mission</span>
+                    </div>
                     <p class="service-footer">
-                        Webit AI se positionne comme <strong>intégrateur terrain B2B post-livraison</strong>. 
-                        Pour la sécurisation, la supervision ou la configuration réseau de votre liaison Starlink, 
-                        nos services <a href="#securite">Sécurité</a>, <a href="#reseau">Réseau</a> 
+                        WEBIT se positionne comme <strong>intégrateur terrain B2B post-livraison</strong>.
+                        Pour la sécurisation, la supervision ou la configuration réseau de votre liaison Starlink,
+                        nos services <a href="#securite">Sécurité</a>, <a href="#reseau">Réseau</a>
                         et <a href="infogerance.html">Infogérance</a> prennent le relais.
                         <br><br>
                         <a href="contact.html?service=starlink" class="btn btn-primary" style="display:inline-block; margin-top:0.5rem;">
@@ -395,8 +379,7 @@
                         </a>
                     </p>
                 </div>
-            </div>
-            <!-- ═══ FIN Service Starlink ═══ -->
+            </details>
 
         </div>
     </section>
@@ -404,10 +387,15 @@
     <!-- CTA -->
     <section class="cta-minimal">
         <div class="container">
-            <div class="cta-content-center">
-                <h2>Besoin d'un de ces services ?</h2>
-                <p>Contactez-nous pour discuter de votre projet</p>
-                <a href="contact.html" class="btn btn-primary-large">Demander un devis</a>
+            <div class="cta-panel">
+                <div class="cta-panel-glow"></div>
+                <div class="cta-panel-text">
+                    <h2>Besoin d'un de ces services ?</h2>
+                    <p>Contactez-nous pour discuter de votre projet.</p>
+                </div>
+                <div class="cta-panel-actions">
+                    <a href="contact.html" class="btn btn-primary btn-primary-large">Demander un devis</a>
+                </div>
             </div>
         </div>
     </section>
@@ -422,9 +410,9 @@
                     <small>France • Gabon</small></p>
                 </div>
                 <div class="footer-contact">
-                    <a href="tel:+33615197625">📱 +33 6 15 19 76 25</a>
-                    <a href="mailto:contact@webit-ai.com">📧 contact@webit-ai.com</a>
-                    <a href="https://www.linkedin.com/company/136136463/" target="_blank" rel="noopener">💼 LinkedIn</a>
+                    <a href="tel:+33615197625"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> +33 6 15 19 76 25</a>
+                    <a href="mailto:contact@webit-ai.com"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg> contact@webit-ai.com</a>
+                    <a href="https://www.linkedin.com/company/136136463/" target="_blank" rel="noopener">LinkedIn</a>
                 </div>
                 <div class="footer-links">
                     <a href="index.html">Accueil</a>

@@ -1,0 +1,13 @@
+# Config locale, non liée au site
+.mcp.json
+.impeccable/
+
+# Previews V2/V3 gelées — jamais poussées sans demande explicite (voir mémoire du projet)
+index-v2.html
+style-v2.css
+script-v2.js
+index-v3.html
+style-v3.css
+script-v3.js
+PRODUCT.md
+DESIGN.md

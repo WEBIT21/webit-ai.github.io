@@ -37,35 +37,53 @@ RÈGLES STRICTES :
 - Si le message contient [ZONE: France], mets en avant Île-de-France et interventions rapides
 - Pour toute demande de devis ou de contact : dis qu'un formulaire va apparaître directement dans le chat`;
 
-const CORS = {
-  'Access-Control-Allow-Origin': '*',
-  'Access-Control-Allow-Methods': 'POST, OPTIONS',
-  'Access-Control-Allow-Headers': 'Content-Type',
-};
+// N'autoriser que les origines légitimes du site (jamais '*' : un wildcard ici permet à
+// n'importe quel site tiers d'appeler ce Worker et de consommer ton quota ANTHROPIC_API_KEY).
+const ALLOWED_ORIGINS = ['https://webit-ai.com', 'https://www.webit-ai.com'];
+
+function corsHeaders(origin) {
+  return {
+    'Access-Control-Allow-Origin': ALLOWED_ORIGINS.includes(origin) ? origin : ALLOWED_ORIGINS[0],
+    'Access-Control-Allow-Methods': 'POST, OPTIONS',
+    'Access-Control-Allow-Headers': 'Content-Type',
+    'Vary': 'Origin',
+  };
+}
 
 export default {
   async fetch(request, env) {
+    const origin = request.headers.get('Origin') || '';
+    const CORS = corsHeaders(origin);
+
     if (request.method === 'OPTIONS') {
       return new Response(null, { status: 204, headers: CORS });
+    }
+
+    // Garde-fou minimal : refuse les appels dont l'Origin n'est pas le site (ex: appel direct
+    // en curl/Postman depuis un autre domaine). Insuffisant seul contre l'abus de quota : active
+    // en plus une règle "Rate Limiting" côté tableau de bord Cloudflare sur cette route (le code
+    // d'un Worker, sans binding KV/Durable Object, ne peut pas compter les requêtes de façon fiable).
+    if (origin && !ALLOWED_ORIGINS.includes(origin)) {
+      return new Response('Forbidden', { status: 403, headers: CORS });
     }
 
     const url = new URL(request.url);
 
     if (url.pathname === '/api/chat' && request.method === 'POST') {
-      return handleChat(request, env);
+      return handleChat(request, env, CORS);
     }
 
     return new Response('Not Found', { status: 404, headers: CORS });
   }
 };
 
-async function handleChat(request, env) {
+async function handleChat(request, env, CORS) {
   try {
     const body = await request.json();
     const { message, history } = body;
 
     if (!message || typeof message !== 'string' || message.length > 1000) {
-      return json({ success: false, error: 'Message invalide' }, 400);
+      return json({ success: false, error: 'Message invalide' }, 400, CORS);
     }
 
     const messages = [
@@ -91,21 +109,21 @@ async function handleChat(request, env) {
     if (!res.ok) {
       const err = await res.text();
       console.error('Anthropic error:', res.status, err);
-      return json({ success: false, error: 'Service IA indisponible' }, 502);
+      return json({ success: false, error: 'Service IA indisponible' }, 502, CORS);
     }
 
     const data = await res.json();
     const reply = data.content?.[0]?.text ?? '';
 
-    return json({ success: true, response: reply });
+    return json({ success: true, response: reply }, 200, CORS);
 
   } catch (err) {
     console.error('Worker error:', err);
-    return json({ success: false, error: 'Erreur serveur' }, 500);
+    return json({ success: false, error: 'Erreur serveur' }, 500, CORS);
   }
 }
 
-function json(data, status = 200) {
+function json(data, status, CORS) {
   return new Response(JSON.stringify(data), {
     status,
     headers: { ...CORS, 'Content-Type': 'application/json' }
