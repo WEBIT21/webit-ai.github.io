@@ -87,6 +87,8 @@ body {
     font-size: 24px;
     font-weight: 400;
     color: var(--white);
+    text-decoration: none;
+    display: inline-block;
 }
 
 .logo strong {
@@ -622,14 +624,26 @@ body {
         grid-template-columns: 1fr;
     }
 
-    .structure-hub {
-        order: -1;
-        margin-bottom: 12px;
-    }
-
+    /* Remplace les traits horizontaux (masqués) par des traits verticaux,
+       pour garder un lien visuel entre France → WEBIT → Gabon une fois empilés. */
     .structure-hub::before,
     .structure-hub::after {
-        display: none;
+        top: auto;
+        left: 50%;
+        right: auto;
+        width: 1px;
+        height: 28px;
+        transform: translateX(-50%);
+    }
+
+    .structure-hub::before {
+        bottom: 100%;
+        background: linear-gradient(to top, var(--color-cyan), transparent);
+    }
+
+    .structure-hub::after {
+        top: 100%;
+        background: linear-gradient(to bottom, var(--color-cyan), transparent);
     }
 }
 
