@@ -1051,7 +1051,9 @@ body {
 
 .services-minimal {
     padding: 100px 0;
-    background: var(--navy-900);
+    background:
+        radial-gradient(circle at 85% 100%, rgba(37, 99, 235, 0.1), transparent 50%),
+        var(--navy-900);
 }
 
 .services-grid-minimal {
